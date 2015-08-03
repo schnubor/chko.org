@@ -5,8 +5,8 @@ header{
 
     .header-content{
         position: relative;
-        height: 380px;
-        top: calc(50% - 190px);
+        height: 200px;
+        top: calc(50% - 120px);
 
         // iPhone
         @media only screen and (max-width:640px){ 
@@ -14,8 +14,9 @@ header{
             top: calc(50% - 140px);
         }
 
-        .logo{
-            width: 260px;
+        .portrait{
+            width: 200px;
+            border-radius: 50%;
 
             // iPhone
             @media only screen and (max-width:640px){ 
@@ -23,21 +24,45 @@ header{
             }
         }
 
-        h1{
-            font-family: Georgia, serif;
-            font-style: italic;
-            color: $grey;
-            font-size: 32px;
-            margin-top: 100px;
-            margin-bottom: 0;
+        .text{
+            display: inline-block;
+            text-align: left;
+            padding-left: 40px;
+            vertical-align: middle;
 
-            // iPhone
-            @media only screen and (max-width:640px){ 
-                margin-top: 50px;
-                font-size: 24px;
-                padding: 0 20px;
+            h1{
+                font-size: 52px;
+                margin: 0;
+
+                // iPhone
+                @media only screen and (max-width:640px){ 
+                    margin-top: 50px;
+                    font-size: 24px;
+                    padding: 0 20px;
+                }
+            }
+
+            h2{
+                color: $grey;
+                margin-top: 10px;
+                margin-bottom: 20px;
             }
         }
+        
+        .buttons{
+            .btn-default{
+                background-color: transparent;
+                border-color: $red;
+                color: $red;
+                transition: .2s all;
+
+                &:hover{
+                    background-color: $red;
+                    color: white;
+                }
+            }
+        }
+
     }
 
     .arrow{
