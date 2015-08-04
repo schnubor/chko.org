@@ -19,9 +19,9 @@
                     <h1>Christian Korndörfer</h1>
                     <h2 class="cd-headline letters type"><span>I'm a </span>
                         <span class="cd-words-wrapper waiting">
-                            <b class="is-visible">pizza</b>
-                            <b>sushi</b>
-                            <b>steak</b>
+                            <b class="is-visible">web developer.</b>
+                            <b>motion designer.</b>
+                            <b>visual designer.</b>
                         </span>
                     </h2>
                     <div class="buttons">

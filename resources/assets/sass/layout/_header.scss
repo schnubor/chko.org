@@ -46,6 +46,14 @@ header{
                 color: $grey;
                 margin-top: 10px;
                 margin-bottom: 20px;
+                line-height: 40px;
+
+                span{
+                    i{
+                        font-style: normal;
+                        font-weight: 500;
+                    }
+                }
             }
         }
         
