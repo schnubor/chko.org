@@ -1,26 +1,41 @@
 @extends('app')
 
 @section('title')
-    Kiosk Royal
+    Christian Korndoerfer
 @endsection
 
 @section('content')
 
-    <header>
-        <div class="header-content text-center">
-            <div class="container1280">
-                <img src="/images/logo.svg" alt="Kiosk Royal" class="logo">
-                <h1>Grafik und Illustration aus Berlin</h1>
-            </div>
-        </div>
-        <div class="arrow js-arrow">
-            <img src="/images/arrow.svg" alt="scroll down">
-        </div>
-    </header>
-
     {{-- Navigation --}}
     @include('partials.navigation')
     @include('partials.mobile-navigation')
+
+    {{-- Header --}}
+    <header>
+        <div class="header-content text-center">
+            <div class="container1280">
+                <img src="/images/portrait.png" alt="Head of shoulders" class="portrait">
+                <div class="text">
+                    <h1>Christian Korndörfer</h1>
+                    <h2 class="cd-headline letters type"><span>I'm a </span>
+                        <span class="cd-words-wrapper waiting">
+                            <b class="is-visible">web artisan.</b>
+                            <b>motion designer.</b>
+                            <b>burger lover.</b>
+                        </span>
+                    </h2>
+                    <div class="buttons">
+                        <a href="#" class="btn btn-default" title="About me">About me</a>
+                        <a href="#" class="btn btn-default" title="Download CV">Download CV</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="arrow js-arrow">
+            <span class="fa fa-chevron-down"></span>
+        </div>
+    </header>
 
     {{-- Projects --}}
     @if(!empty($categories))
@@ -49,15 +64,5 @@
     @endif
 
     {{-- Footer --}}
-    <footer id="footer" class="text-center">
-        <ul>
-            <li class="js-kontakt">Kontakt</li>
-            <li class="js-imprint">Impressum</li>
-            <li><a href="https://www.facebook.com/KIOSKROYAL" target="_blank">Facebook</a></li>
-        </ul>
-    </footer>
-
-    {{-- Popups --}}
-    @include('partials.kontakt')
-    @include('partials.imprint')
+    <footer></footer>
 @endsection

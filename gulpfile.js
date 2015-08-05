@@ -38,6 +38,7 @@ elixir(function(mix) {
         'vendor/underscore-min.js',
         'vendor/bootstrap.js',
         'vendor/jquery.easing.min.js',
+        'vendor/headline.js',
         'frontpage.js',
         'backend.js',
         'app.js'
