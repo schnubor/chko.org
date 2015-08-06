@@ -33,7 +33,7 @@ class PagesController extends Controller
         $projects = Project::all();
         $images = Image::all();
 
-        return view('pages/backend')
+        return view('pages/backend/index')
             ->with('users', $users)
             ->with('categories', $categories)
             ->with('projects', $projects)

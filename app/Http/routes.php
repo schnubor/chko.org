@@ -61,6 +61,12 @@ delete('/user/{id}/delete', [
 ]);
 
 /* Category */
+get('backend/category/create', [
+    'as' => 'get.create.category',
+    'middleware' => 'auth',
+    'uses' => 'CategoriesController@create'
+]);
+
 post('/category/create', [
     'as' => 'post.create.category',
     'middleware' => 'auth',
@@ -85,6 +91,12 @@ delete('/category/{id}/delete', [
 ]);
 
 /* Project */
+get('/backend/project/create', [
+    'as' => 'get.create.project',
+    'middleware' => 'auth',
+    'uses' => 'ProjectsController@create'
+]);
+
 post('/project/create', [
     'as' => 'post.create.project',
     'middleware' => 'auth',

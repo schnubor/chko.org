@@ -8,6 +8,7 @@ use App\Http\Requests\EditProjectRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Project;
+use App\Category;
 
 class ProjectsController extends Controller
 {
@@ -28,7 +29,11 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        $projects = Project::all();
+        return view('pages/backend/project/create')
+            ->with('categories', $categories)
+            ->with('projects', $projects);
     }
 
     /**
