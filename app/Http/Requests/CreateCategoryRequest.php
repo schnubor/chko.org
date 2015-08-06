@@ -25,7 +25,6 @@ class CreateCategoryRequest extends Request
     {
         return [
             'title' => 'required',
-            'position' => 'required'
         ];
     }
 }

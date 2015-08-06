@@ -39,9 +39,7 @@ class CategoriesController extends Controller
     public function store(CreateCategoryRequest $request)
     {
         $category = Category::create([
-            'title' => $request->input('title'),
-            'position' => $request->input('position'),
-            'color' => $request->input('color')
+            'title' => $request->input('title')
         ]);
         if($category){
             flash()->success('Category created successfully!');
