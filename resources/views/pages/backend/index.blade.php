@@ -34,6 +34,46 @@
         @include('partials.backend.modals.category')
 
         {{------------------ Projects ------------------}}
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong>Projects</strong>
+                    </div>
+                    <div class="panel-body">
+                        @if($projects->count())
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th class="text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach($projects as $project)
+                                        <tr>
+                                            <td>{{ $project->title }}</td>
+                                            <td>{{ $project->description }}</td>
+                                            <td>
+                                                <button class="btn btn-default btn-sm"><i class="fa fa-fw fa-pencil"></i> Edit</button>
+                                                {!! Form::open(['route' => ['delete.project', $project->id], 'style' => 'margin-bottom: 0; display: inline-block;', 'onsubmit'=>'return confirm("Really want to delete '.$project->title.'? You will also delete all links and images in the project.");']) !!}
+                                                    <input name="_method" type="hidden" value="DELETE">
+                                                    {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm btn-danger', 'data-toggle' => 'tooltip',  'data-placement' => 'bottom', 'title' => 'Delete']) !!}
+                                                {!! Form::close() !!}
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        @else
+                            <p>No projects yet.</p>
+                            <a href="{{ route('get.create.project') }}" class="btn btn-primary">Create Project</a>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
         @include('partials.backend.modals.project')
 
         {{------------------ Images ------------------}}

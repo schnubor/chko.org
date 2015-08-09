@@ -21,7 +21,7 @@
             @endif
             <h1>Backend &rarr; New Project</h1>
             <p class="lead">Create a new project</p>
-            <a href="{{ route('backend') }}" class="btn btn-sm btn-default"><i class="fa fa-fw fa-sign-out"></i> Back to Overview</a>
+            <a href="{{ route('backend') }}" class="btn btn-sm btn-default">&larr; Back to Overview</a>
         </div>
     </div>
     <div class="container" style="padding-bottom:20px;">
@@ -42,7 +42,7 @@
                         <select name="position" id="projectPosition" class="form-control">
                             <option disabled selected>Choose category</option>
                             @foreach($categories as $category)
-                                <select value="{{ $category->id }}">{{ $category->title }}</select>
+                                <option value="{{ $category->id }}">{{ $category->title }}</option>
                             @endforeach
                         </select>
                     </div>
