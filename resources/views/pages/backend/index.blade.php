@@ -26,8 +26,6 @@
         </div>
     </div>
     <div class="container" style="padding-bottom:20px;">
-        {{------------------ Admins ------------------}}
-        @include('partials.backend.admins')
 
         {{------------------ Categories ------------------}}
         @include('partials.backend.categories')
@@ -42,6 +40,9 @@
 
         {{------------------ Links ------------------}}
         @include('partials.backend.links')
+
+        {{------------------ Admins ------------------}}
+        @include('partials.backend.admins')
 
         {{------------------ Footer ------------------}}
         <footer class="row text-center">

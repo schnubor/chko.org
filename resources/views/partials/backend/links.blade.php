@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-    <div class="panel-heading">Links</div>
+    <div class="panel-heading"><strong>Links</strong></div>
     <div class="panel-body">
         @if($links->count())
             <table class="table">
