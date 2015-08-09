@@ -18,7 +18,15 @@ class Project extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'description', 'color', 'bgcolor', 'position', 'category_id'];
+    protected $fillable = ['title', 'description', 'category_id'];
+
+    /**
+     * Get the links for the project.
+     */
+    public function links()
+    {
+        return $this->hasMany('App\Link');
+    }
 
     /**
      * Get the images for the project.

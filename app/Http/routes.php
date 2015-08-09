@@ -133,3 +133,16 @@ delete('/image/{id}/delete', [
     'uses' => 'ImagesController@destroy'
 ]);
 
+/* Links */
+post('/link/create', [
+    'as' => 'post.create.link',
+    'middleware' => 'auth',
+    'uses' => 'LinksController@store'
+]);
+
+delete('/link/{id}/delete', [
+    'as' => 'delete.link',
+    'middleware' => 'auth',
+    'uses' => 'LinksController@destroy'
+]);
+

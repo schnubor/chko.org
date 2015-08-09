@@ -10,6 +10,7 @@ use App\User;
 use App\Category;
 use App\Project;
 use App\Image;
+use App\Link;
 
 class PagesController extends Controller
 {
@@ -32,11 +33,13 @@ class PagesController extends Controller
         $categories = Category::all();
         $projects = Project::all();
         $images = Image::all();
+        $links = Link::all();
 
         return view('pages/backend/index')
             ->with('users', $users)
             ->with('categories', $categories)
             ->with('projects', $projects)
+            ->with('links', $links)
             ->with('images', $images);
     }
     

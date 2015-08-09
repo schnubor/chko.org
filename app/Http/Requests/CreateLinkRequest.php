@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class CreateProjectRequest extends Request
+class CreateLinkRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +25,9 @@ class CreateProjectRequest extends Request
     {
         return [
             'title' => 'required|max:255',
-            'category_id' => 'required'
+            'url' => 'required',
+            'blank' => 'required',
+            'project_id' => 'required'
         ];
     }
 }

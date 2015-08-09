@@ -39,46 +39,13 @@
                         {!! Form::textarea('description', Input::old('description'), ['class' => 'form-control', 'placeholder' => 'Description', 'style' => 'resize: vertical;', 'rows' => '5']) !!}
                     </div>
                     <div class="form-group">
-                        <select name="position" id="projectPosition" class="form-control">
+                        <select name="category_id" id="category_id" class="form-control">
                             <option disabled selected>Choose category</option>
                             @foreach($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->title }}</option>
                             @endforeach
                         </select>
                     </div>
-
-            </div>
-        </div>
-        
-        {{-- Project Images --}}
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <strong>Images</strong>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        
-                    </div>
-                </div>{{-- upload form --}}
-                <div class="row">
-                </div>
-            </div>
-        </div>
-
-        {{-- Project Links --}}
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <strong>Links</strong>
-            </div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-12">
-                        
-                    </div>
-                </div>{{-- upload form --}}
-                <div class="row">
-                </div>
             </div>
         </div>
         
