@@ -8,7 +8,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                {{-- Images --}}
+                @foreach($project->images as $image)
+                    <img src="{{ '/uploads/'.$image->filename }}" alt="{{ $image->project->title }}">
+                @endforeach
             </div>
         </div>
         <div class="row">

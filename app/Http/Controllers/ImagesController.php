@@ -48,7 +48,6 @@ class ImagesController extends Controller
         }
          $image = Image::create([
             'project_id' => $request->input('project_id'),
-            'position' => 1,
             'filename' => $image
         ]);
         if($image){
