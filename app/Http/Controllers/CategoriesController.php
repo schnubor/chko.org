@@ -41,6 +41,7 @@ class CategoriesController extends Controller
         $category = Category::create([
             'title' => $request->input('title')
         ]);
+        
         if($category){
             flash()->success('Category created successfully!');
         }
@@ -83,8 +84,6 @@ class CategoriesController extends Controller
     {
         $category = Category::find($id);
         $category->title = $request->title;
-        $category->position = $request->position;
-        $category->color = $request->color;
 
         if($category->save()){
             flash()->success('Category updated successfully!');

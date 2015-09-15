@@ -1,4 +1,4 @@
-<div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModal">
+<div class="modal fade" id="editCategoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModal">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -10,19 +10,6 @@
                 <div class="form-group">
                     {!! Form::label('title') !!}
                     {!! Form::text('title', Input::old('title'), ['class' => 'form-control js-title', 'required' => 'required']) !!}
-                </div>
-                <div class="form-group">
-                    {!! Form::label('position') !!}
-                    <select name="position" class="form-control js-position">
-                        <option disabled selected>Choose position</option>
-                        @for($i = 1; $i <= $categories->count()+1; $i++)
-                            <option value="{{ $i }}">Position {{ $i }}</option>
-                        @endfor
-                    </select>
-                </div>
-                <div class="form-group">
-                    {!! Form::label('Font color') !!}
-                    <input type="color" name="color" class="form-control js-color">
                 </div>
             </div>
             <div class="modal-footer">
