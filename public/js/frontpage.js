@@ -3,18 +3,6 @@
 
   winHeight = $(window).height();
 
-  $('.js-kontakt').click(function() {
-    return $('#kontakt').fadeIn(100);
-  });
-
-  $('.js-imprint').click(function() {
-    return $('#imprint').fadeIn(100);
-  });
-
-  $('.overlay .js-close').click(function() {
-    return $('.overlay').fadeOut(100);
-  });
-
   $('.js-toggleNav').click(function() {
     $('#mobile-nav').fadeIn();
     return $(this).fadeOut();

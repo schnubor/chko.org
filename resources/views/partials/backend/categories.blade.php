@@ -5,7 +5,6 @@
                 <strong>Categories</strong>
             </div>
             <div class="panel-body">
-
                 @if($categories->count())
                     <div class="row">
                         <div class="col-md-12">
@@ -38,7 +37,7 @@
                         </div>
                     </div>
                 @else
-                    No categories yet.
+                    <p class="lead">No categories yet.</p>
                 @endif
             </div>
             <div class="panel-footer">

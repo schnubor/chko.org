@@ -20,7 +20,7 @@
                                     <td><a href="{{ route('get.project', $project->id) }}">{{ $project->title }}</a></td>
                                     <td><a href="{{ route('get.project', $project->id) }}">{{ $project->description }}</a></td>
                                     <td class="text-right">
-                                        <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-pencil"></i></button>
+                                        <button class="btn btn-sm btn-default" data-toggle="modal" data-target="#editProjectModal" data-id="{{ $project->id }}"><i class="fa fa-fw fa-pencil"></i></button>
                                         {!! Form::open(['route' => ['delete.project', $project->id], 'style' => 'margin-bottom: 0; display: inline-block;', 'onsubmit'=>'return confirm("Really want to delete '.$project->title.'? You will also delete all links and images in the project.");']) !!}
                                             <input name="_method" type="hidden" value="DELETE">
                                             {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm btn-danger', 'data-toggle' => 'tooltip',  'data-placement' => 'bottom', 'title' => 'Delete']) !!}
@@ -37,7 +37,7 @@
                 </div>
             @endif
             <div class="panel-footer">
-                <a href="{{ route('get.create.project') }}" class="btn btn-primary">New Project</a>
+                <button class="btn btn-primary" data-toggle="modal" data-target="#createProjectModal">New Project</button>
             </div>
         </div>
     </div>
