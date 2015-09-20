@@ -36,30 +36,32 @@
         </div>
     </header>
 
-    {{-- Projects --}}
-    @if(!empty($categories))
-        <div class="container">
-        @foreach($categories as $category)
-            <section class="category" id="{{$category->title}}">
-                <h4>{{ $category->title }}</h4>
-                @if(!empty($category->projects()))
-                    @foreach($category->projects as $project)
-                        <section class="project" style="background-color: {{ $project->bgcolor }}; color: {{ $project->color }};">
-                            <div class="container1280">
-                                <h3>{{ $project->title }}</h3>
-                                <h4>{{ $project->description }}</h4>
-                                @foreach($project->images as $image)
-                                    <img src="/uploads/{{ $image->filename }}" alt="{{ $image->project->title }}" class="project-image">
-                                @endforeach
-                            </div>
-                        </section>
-                    @endforeach
-                @endif
-            </section>
-        @endforeach
-        </div>
-    @endif
+    <div class="container">
+        {{-- Projects --}}
+        @if(!empty($categories))
+            @foreach($categories as $category)
+                <section class="category" id="{{$category->title}}">
+                    <h4>{{ $category->title }}</h4> 
+                    @if(!empty($category->projects()))
+                        <div class="row">
+                            @foreach($category->projects as $project)
+                                <div class="col-md-4">
+                                    <div class="view">
+                                        <img src="/uploads/{{ $project->images->first()->filename }}" />
+                                        <div class="mask">
+                                            <h2>{{ $project->title }}</h2>
+                                            <a href="#" class="info">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
+                </section>
+            @endforeach
+        @endif
 
-    {{-- Footer --}}
-    @include('partials/footer')
+        {{-- Footer --}}
+        @include('partials/footer')
+    </div>
 @endsection
