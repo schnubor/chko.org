@@ -1,15 +1,14 @@
 @extends('app')
 
-@section('title')
-    Christian Korndoerfer
-@endsection
+{{-- Head --}}
+@section('title') Christian Korndoerfer @endsection
+@section('description') CHKO.org is the personal online portfolio of Christian Korndoerfer who is a motion/visual designer& web developer from Berlin. Check out some of his selected works. @endsection
+@section('og_image') http://chko.org/images/fb_image.jpg @endsection
+@section('og_desc') CHKO.org is the personal online portfolio of Christian Korndoerfer who is a motion/visual designer& web developer from Berlin. Check out some of his selected works. @endsection
+@section('og_url') chko.org @endsection
 
+{{-- Body --}}
 @section('content')
-
-    {{-- Navigation --}}
-    @include('partials.navigation')
-    @include('partials.mobile-navigation')
-
     {{-- Header --}}
     <header>
         <div class="header-content text-center">
@@ -39,14 +38,11 @@
 
     {{-- Projects --}}
     @if(!empty($categories))
+        <div class="container">
         @foreach($categories as $category)
-            @if(!empty($category->projects->first()->bgcolor))
-                <section class="category" id="{{$category->title}}" style="color: {{ $category->color }}; background-color: {{ $category->projects->first()->bgcolor }};">
-            @else
-                <section class="category" id="{{$category->title}}" style="color: {{ $category->color }}; background-color: white;">
-            @endif
-                <h2>{{ $category->title }}</h2>
-                @if(!empty($category->projects))
+            <section class="category" id="{{$category->title}}">
+                <h4>{{ $category->title }}</h4>
+                @if(!empty($category->projects()))
                     @foreach($category->projects as $project)
                         <section class="project" style="background-color: {{ $project->bgcolor }}; color: {{ $project->color }};">
                             <div class="container1280">
@@ -61,8 +57,9 @@
                 @endif
             </section>
         @endforeach
+        </div>
     @endif
 
     {{-- Footer --}}
-    <footer></footer>
+    @include('partials/footer')
 @endsection
