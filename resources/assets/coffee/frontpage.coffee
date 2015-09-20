@@ -1,16 +1,6 @@
 # General
 winHeight = $(window).height()
 
-# Popups
-$('.js-kontakt').click ->
-    $('#kontakt').fadeIn(100)
-
-$('.js-imprint').click ->
-    $('#imprint').fadeIn(100)
-
-$('.overlay .js-close').click ->
-    $('.overlay').fadeOut(100)
-
 # Mobile Nav
 $('.js-toggleNav').click ->
     $('#mobile-nav').fadeIn()
@@ -26,7 +16,7 @@ $('.js-arrow').click ->
         scrollTop: winHeight
     , 1500, 'easeInOutQuad'
 
-# Arrow
+# Navigation
 $(window).scroll ->
     if($(window).scrollTop() > winHeight-1)
         # show nav

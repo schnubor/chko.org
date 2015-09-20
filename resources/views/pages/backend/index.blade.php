@@ -33,7 +33,8 @@
 
         {{------------------ Projects ------------------}}
         @include('partials.backend.projects')
-        @include('partials.backend.modals.project')
+        @include('partials.backend.modals.createProject')
+        @include('partials.backend.modals.editProject')
 
         {{------------------ Images ------------------}}
         @include('partials.backend.images')

@@ -146,3 +146,11 @@ delete('/link/{id}/delete', [
     'uses' => 'LinksController@destroy'
 ]);
 
+/* API */
+
+get('/api/project/{id}', [
+    'as' => 'api.project',
+    'middleware' => 'auth',
+    'uses' => 'ApiController@project'
+]);
+

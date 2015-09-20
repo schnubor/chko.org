@@ -17,7 +17,7 @@
             <div class="col-md-12">
                 <h1>{{ $project->title }}</h1>
                 <p class="lead">
-                    {{ $project->description }}
+                    {!! html_entity_decode($project->description) !!}
                 </p>
                 @if($project->links->count())
                     <ul>

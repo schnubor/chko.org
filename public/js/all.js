@@ -11557,7 +11557,7 @@ jQuery(document).ready(function($){
         //letters effect
         lettersDelay = 50,
         //type effect
-        typeLettersDelay = 150,
+        typeLettersDelay = 75,
         selectionDuration = 500,
         typeAnimationDelay = selectionDuration + 800,
         //clip effect 
@@ -11707,18 +11707,6 @@ jQuery(document).ready(function($){
 
   winHeight = $(window).height();
 
-  $('.js-kontakt').click(function() {
-    return $('#kontakt').fadeIn(100);
-  });
-
-  $('.js-imprint').click(function() {
-    return $('#imprint').fadeIn(100);
-  });
-
-  $('.overlay .js-close').click(function() {
-    return $('.overlay').fadeOut(100);
-  });
-
   $('.js-toggleNav').click(function() {
     $('#mobile-nav').fadeIn();
     return $(this).fadeOut();
@@ -11754,30 +11742,26 @@ jQuery(document).ready(function($){
  */
 
 (function() {
-  $('#categoryModal').on('show.bs.modal', function(event) {
-    var button, id;
+  $('#editCategoryModal').on('show.bs.modal', function(event) {
+    var _self, button, id;
+    _self = $(this);
     button = $(event.relatedTarget);
     id = button.data('id');
     return $.getJSON('/category/' + id, function(data) {
-      console.log(data.title);
-      $('#categoryModal').find('.js-form').attr('action', '/category/' + data.id + '/edit');
-      $('#categoryModal').find('.js-title').val(data.title);
-      $('#categoryModal').find('.js-position').val(data.position);
-      return $('#categoryModal').find('.js-color').val(data.color);
+      _self.find('.js-form').attr('action', '/category/' + data.id + '/edit');
+      return _self.find('.js-title').val(data.title);
     });
   });
 
-  $('#projectModal').on('show.bs.modal', function(event) {
-    var button, id;
+  $('#editProjectModal').on('show.bs.modal', function(event) {
+    var _self, button, id;
+    _self = $(this);
     button = $(event.relatedTarget);
     id = button.data('id');
-    return $.getJSON('/project/' + id, function(data) {
-      $('#projectModal').find('.js-form').attr('action', '/project/' + data.id + '/edit');
-      $('#projectModal').find('.js-title').val(data.title);
-      $('#projectModal').find('.js-description').val(data.description);
-      $('#projectModal').find('.js-position').val(data.position);
-      $('#projectModal').find('.js-color').val(data.color);
-      return $('#projectModal').find('.js-bgcolor').val(data.bgcolor);
+    return $.getJSON('/api/project/' + id, function(data) {
+      _self.find('.js-form').attr('action', '/project/' + data.id + '/edit');
+      _self.find('.js-title').val(data.title);
+      return _self.find('.js-description').val(data.description);
     });
   });
 

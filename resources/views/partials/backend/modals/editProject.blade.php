@@ -1,4 +1,4 @@
-<div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModal">
+<div class="modal fade" id="editProjectModal" tabindex="-1" role="dialog" aria-labelledby="projectModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -13,24 +13,6 @@
                 </div>
                 <div class="form-group">
                     {!! Form::textarea('description', Input::old('description'), ['class' => 'form-control js-description', 'placeholder' => 'Description', 'required' => 'required', 'style' => 'resize: vertical;', 'rows' => '5']) !!}
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('position') !!}
-                    <select name="position" class="form-control js-position">
-                        <option disabled selected>Choose position</option>
-                        @for($i = 1; $i <= $categories->count()+1; $i++)
-                            <option value="{{ $i }}">Position {{ $i }}</option>
-                        @endfor
-                    </select>
-                </div>
-                <div class="form-group">
-                    {!! Form::label('Font color') !!}
-                    <input type="color" name="color" class="form-control js-color">
-                </div>
-                <div class="form-group">
-                    {!! Form::label('Background color') !!}
-                    <input type="color" name="bgcolor" class="form-control js-bgcolor">
                 </div>
             </div>
             <div class="modal-footer">
