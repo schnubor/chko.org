@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Image;
 use Storage;
+use Resizer;
 
 class ImagesController extends Controller
 {
@@ -51,6 +52,17 @@ class ImagesController extends Controller
             'filename' => $image
         ]);
         if($image){
+            $filename = substr($image->filename, 0, -4);
+            // Resize image
+            $img640 = Resizer::make('uploads/'.$image->filename)->widen(640);
+            $img1280 = Resizer::make('uploads/'.$image->filename)->widen(1280);
+            $img1920 = Resizer::make('uploads/'.$image->filename)->widen(1920);
+            $img2560 = Resizer::make('uploads/'.$image->filename)->widen(2560);
+            // Save images
+            $img640->save('uploads/'.$filename.'_640.png');
+            $img1280->save('uploads/'.$filename.'_1280.png');
+            $img1920->save('uploads/'.$filename.'_1920.png');
+            $img2560->save('uploads/'.$filename.'_2560.png');
             flash()->success('Image uploaded successfully!');
         }
         else{
