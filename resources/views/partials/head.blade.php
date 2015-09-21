@@ -1,6 +1,6 @@
 <title>@yield('title')</title>
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="{{ elixir("css/all.css") }}">
 <link rel="stylesheet" href="/css/vendor/font-awesome.min.css">
 
