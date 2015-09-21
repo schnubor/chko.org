@@ -8,7 +8,7 @@
                         <th>Title</th>
                         <th>URL</th>
                         <th>Blank</th>
-                        <th>Project ID</th>
+                        <th>Project</th>
                         <th class="text-right">Actions</th>
                     </tr>
                 </thead>
@@ -18,7 +18,7 @@
                             <td>{{ $link->title }}</td>
                             <td>{{ $link->url }}</td>
                             <td>{{ $link->blank }}</td>
-                            <td>{{ $link->project_id }}</td>
+                            <td>{{ $link->project->title }}</td>
                             <td class="text-right">
                                 <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-pencil"></i></button>
                                 {!! Form::open(['route' => ['delete.link', $link->id], 'style' => 'margin-bottom: 0; display: inline-block;', 'onsubmit'=>'return confirm("Really want to delete this link?");']) !!}

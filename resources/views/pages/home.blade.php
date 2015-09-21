@@ -1,15 +1,14 @@
 @extends('app')
 
-@section('title')
-    Christian Korndoerfer
-@endsection
+{{-- Head --}}
+@section('title') Christian Korndoerfer @endsection
+@section('description') CHKO.org is the personal online portfolio of Christian Korndoerfer who is a motion/visual designer& web developer from Berlin. Check out some of his selected works. @endsection
+@section('og_image') http://chko.org/images/fb_image.jpg @endsection
+@section('og_desc') CHKO.org is the personal online portfolio of Christian Korndoerfer who is a motion/visual designer& web developer from Berlin. Check out some of his selected works. @endsection
+@section('og_url') chko.org @endsection
 
+{{-- Body --}}
 @section('content')
-
-    {{-- Navigation --}}
-    @include('partials.navigation')
-    @include('partials.mobile-navigation')
-
     {{-- Header --}}
     <header>
         <div class="header-content text-center">
@@ -37,32 +36,32 @@
         </div>
     </header>
 
-    {{-- Projects --}}
-    @if(!empty($categories))
-        @foreach($categories as $category)
-            @if(!empty($category->projects->first()->bgcolor))
-                <section class="category" id="{{$category->title}}" style="color: {{ $category->color }}; background-color: {{ $category->projects->first()->bgcolor }};">
-            @else
-                <section class="category" id="{{$category->title}}" style="color: {{ $category->color }}; background-color: white;">
-            @endif
-                <h2>{{ $category->title }}</h2>
-                @if(!empty($category->projects))
-                    @foreach($category->projects as $project)
-                        <section class="project" style="background-color: {{ $project->bgcolor }}; color: {{ $project->color }};">
-                            <div class="container1280">
-                                <h3>{{ $project->title }}</h3>
-                                <h4>{{ $project->description }}</h4>
-                                @foreach($project->images as $image)
-                                    <img src="/uploads/{{ $image->filename }}" alt="{{ $image->project->title }}" class="project-image">
-                                @endforeach
-                            </div>
-                        </section>
-                    @endforeach
-                @endif
-            </section>
-        @endforeach
-    @endif
+    <div class="container">
+        {{-- Projects --}}
+        @if(!empty($categories))
+            @foreach($categories as $category)
+                <section class="category" id="{{$category->title}}">
+                    <h4>{{ $category->title }}</h4> 
+                    @if(!empty($category->projects()))
+                        <div class="row">
+                            @foreach($category->projects as $project)
+                                <div class="col-md-4">
+                                    <div class="view">
+                                        <img src="/uploads/{{ $project->images->first()->filename }}" />
+                                        <div class="mask">
+                                            <h2>{{ $project->title }}</h2>
+                                            <a href="#" class="info">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
+                </section>
+            @endforeach
+        @endif
 
-    {{-- Footer --}}
-    <footer></footer>
+        {{-- Footer --}}
+        @include('partials/footer')
+    </div>
 @endsection

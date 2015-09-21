@@ -3,7 +3,6 @@
         @include('partials/head')
     </head>
     <body>
-              
         {{-- Content --}}
         @yield('content')
 
