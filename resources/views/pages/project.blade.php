@@ -8,9 +8,33 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                @foreach($project->images as $image)
-                    <img src="{{ '/uploads/'.$image->filename }}" alt="{{ $image->project->title }}">
-                @endforeach
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        @foreach($project->images as $key => $image)
+                            @if($key == 0)
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            @else
+                                <li data-target="#carousel-example-generic" data-slide-to="{{ $key }}"></li>
+                            @endif
+                        @endforeach
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        @foreach($project->images as $key => $image)
+                            @if($key == 0)
+                                <div class="item active">
+                                    <img class="" src="{{ '/uploads/'.$image->filename }}" alt="{{ $image->project->title }}">
+                                </div>
+                            @else
+                                <div class="item">
+                                    <img class="" src="{{ '/uploads/'.$image->filename }}" alt="{{ $image->project->title }}">
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">

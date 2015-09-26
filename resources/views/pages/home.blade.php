@@ -16,7 +16,7 @@
                 <img src="/images/portrait.png" alt="Head of shoulders" class="portrait">
                 <div class="text">
                     <h1>Christian Korndörfer</h1>
-                    <h2 class="cd-headline letters type"><span>I'm a </span>
+                    <h2 class="cd-headline letters type"><span>Hi, I'm a </span>
                         <span class="cd-words-wrapper waiting">
                             <b class="is-visible">web artisan.</b>
                             <b>motion designer.</b>
@@ -46,13 +46,7 @@
                         <div class="row">
                             @foreach($category->projects as $project)
                                 <div class="col-md-4">
-                                    <div class="view">
-                                        <img src="/uploads/{{ $project->images->first()->filename }}" />
-                                        <div class="mask">
-                                            <h2>{{ $project->title }}</h2>
-                                            <a href="#" class="info">Read More</a>
-                                        </div>
-                                    </div>
+                                    <img class="full-width" src="/uploads/{{ $project->images->first()->filename }}" />
                                 </div>
                             @endforeach
                         </div>

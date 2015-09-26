@@ -7011,7 +7011,7 @@ button.close {
 html, body {
   width: 100%;
   height: 100%;
-  font-family: 'Roboto Mono', Helvetica, sans-serif; }
+  font-family: 'Lato', Helvetica, sans-serif; }
 
 *, *::after, *::before {
   box-sizing: border-box; }
@@ -7019,6 +7019,9 @@ html, body {
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.full-width {
+  width: 100%; }
 
 .cd-words-wrapper {
   display: inline-block;
@@ -7221,7 +7224,8 @@ header {
       background-color: transparent;
       border-color: #EA4134;
       color: #EA4134;
-      transition: .2s all; }
+      -webkit-transition: .2s all;
+              transition: .2s all; }
       header .header-content .buttons .btn-default:hover {
         background-color: #EA4134;
         color: white; }
@@ -7281,6 +7285,20 @@ header {
         #footer ul li a:hover {
           color: black; }
 
+.carousel-indicators {
+  bottom: -20px; }
+  .carousel-indicators .active {
+    background-color: #000;
+    margin: 1px 5px;
+    width: 10px;
+    height: 10px; }
+  .carousel-indicators li {
+    border: 1px solid #000;
+    margin: 1px 5px; }
+  @media screen and (min-width: 768px) {
+    .carousel-indicators {
+      bottom: -20px; } }
+
 .mobile-nav-toggle {
   width: 40px;
   position: fixed;
@@ -7292,7 +7310,8 @@ header {
     .mobile-nav-toggle {
       display: block; } }
   .mobile-nav-toggle .bar {
-    transition: .2s all;
+    -webkit-transition: .2s all;
+            transition: .2s all;
     display: block;
     background-color: #777777;
     width: 100%;
@@ -7354,7 +7373,8 @@ nav {
       text-transform: uppercase;
       margin-right: 30px;
       letter-spacing: 1px;
-      transition: .2s all;
+      -webkit-transition: .2s all;
+              transition: .2s all;
       border-bottom: none; }
       @media only screen and (max-width: 1280px) {
         nav .menu li {
@@ -7421,7 +7441,8 @@ nav {
           width: 80px; } }
     .overlay .popup-content .close-icon {
       color: #CCC;
-      transition: 0.2s all;
+      -webkit-transition: 0.2s all;
+              transition: 0.2s all;
       position: absolute;
       top: 0;
       right: 30px;
@@ -7434,79 +7455,6 @@ nav {
         .overlay .popup-content .close-icon {
           right: 20px;
           line-height: 60px; } }
-
-.view {
-  width: 100%;
-  height: 250px;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  cursor: default;
-  background: #fff url(../images/bgimg.jpg) no-repeat center center; }
-  .view:hover img {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1); }
-  .view:hover .mask {
-    opacity: 1; }
-  .view:hover a.info, .view:hover h2 {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-        -ms-transform: translateY(0px);
-            transform: translateY(0px); }
-  .view:hover a.info {
-    transition-delay: 0.2s; }
-  .view .mask, .view .content {
-    width: 100%;
-    height: 250px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0; }
-  .view .mask {
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: all 0.4s ease-in-out; }
-  .view img {
-    display: block;
-    position: relative;
-    transition: all 0.2s linear;
-    width: 100%; }
-  .view h2 {
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 17px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    margin: 20px 0 0 0;
-    -webkit-transform: translateY(-100px);
-        -ms-transform: translateY(-100px);
-            transform: translateY(-100px);
-    opacity: 0;
-    transition: all 0.2s ease-in-out; }
-  .view p {
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 12px;
-    position: relative;
-    color: #fff;
-    padding: 10px 20px 20px;
-    text-align: center; }
-  .view a.info {
-    display: inline-block;
-    text-decoration: none;
-    padding: 7px 14px;
-    background: #000;
-    color: #fff;
-    text-transform: uppercase;
-    box-shadow: 0 0 1px #000;
-    opacity: 0;
-    transition: all 0.2s ease-in-out; }
-    .view a.info:hover {
-      box-shadow: 0 0 5px #000; }
 
 /*# sourceMappingURL=app.css.map */
 /*# sourceMappingURL=all.css.map */
