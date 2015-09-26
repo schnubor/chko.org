@@ -7011,7 +7011,8 @@ button.close {
 html, body {
   width: 100%;
   height: 100%;
-  font-family: 'Lato', Helvetica, sans-serif; }
+  font-family: 'Lato', Helvetica, sans-serif;
+  color: #202020; }
 
 *, *::after, *::before {
   box-sizing: border-box; }
@@ -7120,33 +7121,27 @@ xtype
     transform: translateY(-50%) scale(0);
     opacity: 0; } }
 
-.container1280 {
-  width: 1280px;
-  margin: 0 auto; }
-  @media only screen and (max-width: 1280px) {
-    .container1280 {
-      width: 960px; } }
-  @media only screen and (max-width: 960px) {
-    .container1280 {
-      width: 640px; } }
-  @media only screen and (max-width: 640px) {
-    .container1280 {
-      width: 100%; } }
+.logo {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  margin: 20px; }
 
 .category {
   text-align: center;
-  padding-top: 0px; }
+  padding-top: 80px; }
   @media only screen and (max-width: 640px) {
     .category {
       padding-top: 65px; } }
-  .category h2 {
+  .category h3 {
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 500;
-    margin: 0; }
+    margin-bottom: 60px;
+    text-align: left; }
     @media only screen and (max-width: 640px) {
-      .category h2 {
+      .category h3 {
         padding: 0 20px;
         font-size: 24px; } }
 
@@ -7239,10 +7234,10 @@ header {
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s; }
-    header .arrow img {
-      cursor: pointer;
-      width: 25px; }
+            animation-duration: 2s;
+    cursor: pointer; }
+    header .arrow p {
+      color: #777777; }
 
 @-webkit-keyframes upAndDown {
   0% {

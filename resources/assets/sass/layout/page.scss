@@ -1,39 +1,26 @@
-.container1280{
-    width: 1280px;
-    margin: 0 auto;
-
-    // Macbook
-    @media only screen and (max-width: 1280px){
-        width: 960px;
-    }
-
-    // iPad
-    @media only screen and (max-width:960px){
-        width: 640px;
-    }
-
-    // iPhone
-    @media only screen and (max-width:640px){ 
-        width: 100%;
-    }
-
+.logo{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
 }
 
 .category{
     text-align: center;
-    padding-top: 0px;
+    padding-top: 80px;
 
     // iPhone
     @media only screen and (max-width:640px){ 
         padding-top: 65px;
     }
 
-    h2{
+    h3{
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-size: 60px;
+        font-size: 30px;
         font-weight: 500;
-        margin: 0;
+        margin-bottom: 60px;
+        text-align: left;
 
         // iPhone
         @media only screen and (max-width:640px){

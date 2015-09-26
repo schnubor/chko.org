@@ -11,6 +11,9 @@
 @section('content')
     {{-- Header --}}
     <header>
+        <div class="logo">
+            <img class="full-width" src="/images/logo.png" alt="Chko Logo">
+        </div>
         <div class="header-content text-center">
             <div class="container1280">
                 <img src="/images/portrait.png" alt="Head of shoulders" class="portrait">
@@ -32,25 +35,27 @@
             </div>
         </div>
         <div class="arrow js-arrow">
+            <p>stuff to look at</p>
             <span class="fa fa-chevron-down"></span>
         </div>
     </header>
 
-    <div class="container">
         {{-- Projects --}}
         @if(!empty($categories))
             @foreach($categories as $category)
                 <section class="category" id="{{$category->title}}">
-                    <h4>{{ $category->title }}</h4> 
-                    @if(!empty($category->projects()))
-                        <div class="row">
-                            @foreach($category->projects as $project)
-                                <div class="col-md-4">
-                                    <img class="full-width" src="/uploads/{{ $project->images->first()->filename }}" />
-                                </div>
-                            @endforeach
-                        </div>
-                    @endif
+                    <div class="container">
+                    <h3>&#8594; {{ $category->title }}</h3> 
+                        @if(!empty($category->projects()))
+                            <div class="row">
+                                @foreach($category->projects as $project)
+                                    <div class="col-md-4">
+                                        <img class="full-width" src="/uploads/{{ $project->images->first()->filename }}" />
+                                    </div>
+                                @endforeach
+                            </div>
+                        @endif
+                    </div>
                 </section>
             @endforeach
         @endif
