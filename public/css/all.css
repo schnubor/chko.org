@@ -7159,6 +7159,11 @@ xtype
   font-family: 'Merriweather', serif;
   font-size: 18px;
   line-height: 40px; }
+  .project p a {
+    color: #EA4134;
+    font-weight: bold; }
+    .project p a:hover {
+      text-decoration: none; }
   .project p.links {
     font-family: 'Lato', sans-serif;
     font-weight: bold; }
@@ -7249,6 +7254,11 @@ header {
   #footer a {
     padding-right: 15px;
     color: #777777; }
+
+.be-description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
 
 .carousel-indicators {
   bottom: -20px; }

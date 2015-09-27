@@ -48,6 +48,15 @@
         font-size: 18px;
         line-height: 40px;
 
+        a{
+            color: $red;
+            font-weight: bold;
+            
+            &:hover{
+                text-decoration: none;
+            }
+        }
+
         &.links{
             font-family: 'Lato', sans-serif;
             font-weight: bold;
