@@ -18,7 +18,7 @@
                             @foreach($projects as $project)
                                 <tr>
                                     <td><a href="{{ route('get.project', $project->id) }}">{{ $project->title }}</a></td>
-                                    <td class="be-description"><a href="{{ route('get.project', $project->id) }}">{{ $project->description }}</a></td>
+                                    <td><a class="be-description" href="{{ route('get.project', $project->id) }}">{{ $project->description }}</a></td>
                                     <td class="text-right">
                                         <button class="btn btn-sm btn-default" data-toggle="modal" data-target="#editProjectModal" data-id="{{ $project->id }}"><i class="fa fa-fw fa-pencil"></i></button>
                                         {!! Form::open(['route' => ['delete.project', $project->id], 'style' => 'margin-bottom: 0; display: inline-block;', 'onsubmit'=>'return confirm("Really want to delete '.$project->title.'? You will also delete all links and images in the project.");']) !!}

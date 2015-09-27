@@ -248,7 +248,9 @@ header {
 .be-description {
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 600px;
+  display: block; }
 
 .carousel-indicators {
   bottom: -20px; }
