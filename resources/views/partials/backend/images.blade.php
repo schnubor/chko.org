@@ -7,29 +7,35 @@
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-12">
-                        @if($images->count())
-                            @foreach($images as $image)
-                                <div class="col-md-3">
-                                    <div class="thumbnail">
-                                        <img src="{{ '/uploads/'.$image->filename }}" alt="Image of {{ $image->project->title }}">
-                                        <div class="caption">
-                                            <small style="color: #ccc;">{{ $image->filename }}</small><br>
-                                            <h4>{{ $image->project->title }}</h4>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                {!! Form::open(['route' => ['delete.image', $image->id], 'style' => 'margin-bottom: 0; display: inline-block;', 'onsubmit'=>'return confirm("Really want to delete that image?");', 'class' => 'pull-right']) !!}
-                                                    <input name="_method" type="hidden" value="DELETE">
-                                                    {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm btn-danger', 'data-toggle' => 'tooltip',  'data-placement' => 'bottom', 'title' => 'Delete']) !!}
-                                                {!! Form::close() !!}
+                        @foreach($projects as $project)
+                            <div class="well">
+                                <legend>{{ $project->title }}</legend>
+                                @if($project->images->count())
+                                    <div class="row">
+                                    @foreach($project->images as $image)
+                                        <div class="col-md-3">
+                                            <div class="thumbnail">
+                                                <img src="{{ '/uploads/'.$image->filename }}" alt="Image of {{ $image->project->title }}">
+                                                <div class="caption">
+                                                    <small style="color: #ccc;">{{ $image->filename }}</small><br>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        {!! Form::open(['route' => ['delete.image', $image->id], 'style' => 'margin-bottom: 0; display: inline-block;', 'onsubmit'=>'return confirm("Really want to delete that image?");', 'class' => 'pull-right']) !!}
+                                                            <input name="_method" type="hidden" value="DELETE">
+                                                            {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm btn-danger', 'data-toggle' => 'tooltip',  'data-placement' => 'bottom', 'title' => 'Delete']) !!}
+                                                        {!! Form::close() !!}
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                    @endforeach
                                     </div>
-                                </div>
-                            @endforeach
-                        @else
-                            <p class="lead">No images uploaded yet.</p>
-                        @endif
+                                @else
+                                    <p class="lead">No images uploaded yet.</p>
+                                @endif
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
