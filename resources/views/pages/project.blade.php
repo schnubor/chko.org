@@ -12,6 +12,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h4>&#8594; {{ $project->category->title }} &#8594; {{ $project->title }}</h4>
+                <hr>
             </div>
         </div>
         <div class="row">

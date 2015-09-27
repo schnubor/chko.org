@@ -32,50 +32,6 @@
 }
 
 .project{
-    padding-bottom: 0px;
-    
-    h3{
-        text-transform: uppercase;
-        margin-top: 0;
-        padding-top: 70px;
-        margin-bottom: 15px;
-        font-weight: 200;
-        font-size: 36px;
-        letter-spacing: 1px;
-
-        // iPhone
-        @media only screen and (max-width:640px){ 
-            padding: 0 20px;
-            padding-top: 30px;
-            font-size: 18px;
-        }
-    }
-
-    h4{
-        font-family: Georgia, serif;
-        font-style: italic;
-        padding-bottom: 50px;
-        font-size: 20px;
-
-        // iPhone
-        @media only screen and (max-width:640px){
-            padding: 0 20px; 
-            padding-bottom: 25px;
-            font-size: 14px;
-        }
-    }
-
-    .project-image{
-        width: 100%;
-
-        // iPhone
-        @media only screen and (max-width:640px){ 
-            width: 90%;
-        }
-    }
-}
-
-.project{
     h1{
         font-weight: bold;
         margin: 80px 0 50px;
@@ -90,6 +46,7 @@
     p{
         font-family: 'Merriweather', serif;
         font-size: 18px;
+        line-height: 40px;
 
         &.links{
             font-family: 'Lato', sans-serif;
