@@ -5,7 +5,15 @@
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="logo">
+        <a href="/"><img class="full-width" src="/images/logo.png" alt="CHKO Logo"></a>
+    </div>
+    <div class="container project">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>&#8594; {{ $project->category->title }} &#8594; {{ $project->title }}</h4>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -25,11 +33,11 @@
                         @foreach($project->images as $key => $image)
                             @if($key == 0)
                                 <div class="item active">
-                                    <img class="" src="{{ '/uploads/'.$image->filename }}" alt="{{ $image->project->title }}">
+                                    <img class="full-width" src="{{ '/uploads/'.$image->filename }}" alt="{{ $image->project->title }}">
                                 </div>
                             @else
                                 <div class="item">
-                                    <img class="" src="{{ '/uploads/'.$image->filename }}" alt="{{ $image->project->title }}">
+                                    <img class="full-width" src="{{ '/uploads/'.$image->filename }}" alt="{{ $image->project->title }}">
                                 </div>
                             @endif
                         @endforeach
@@ -40,23 +48,30 @@
         <div class="row">
             <div class="col-md-12">
                 <h1>{{ $project->title }}</h1>
-                <p class="lead">
+                <p>
                     {!! html_entity_decode($project->description) !!}
                 </p>
-                @if($project->links->count())
-                    <ul>
-                        @foreach($project->links as $link)
-                            <li>
-                                <a href="{{ $link->url }}" title="{{ $link->title }}" 
-                                @if($link->blank)
-                                    target="_blank"
-                                @endif>{{ $link->title }}</a>
-                            </li>
-                        @endforeach
-                    </ul>
-                @endif
-                
             </div>
         </div>
+        @if($project->links->count())
+            <div class="row">
+                <div class="col-md-3">
+                <hr>
+                <p class="h3 links">Related Links</p>
+                <ul>
+                    @foreach($project->links as $link)
+                        <li>
+                            <a href="{{ $link->url }}" title="{{ $link->title }}" 
+                            @if($link->blank)
+                                target="_blank"
+                            @endif>{{ $link->title }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+                </div>
+            </div>
+        @endif
     </div>
+
+    @include('partials.footer')
 @endsection

@@ -19,6 +19,12 @@
     }, 1500, 'easeInOutQuad');
   });
 
+  $('.js-scrollToTop').click(function() {
+    return $("html, body").animate({
+      scrollTop: "0px"
+    }, 600, 'easeInOutQuad');
+  });
+
   $(window).scroll(function() {
     if ($(window).scrollTop() > winHeight - 1) {
       $('nav').fadeIn();

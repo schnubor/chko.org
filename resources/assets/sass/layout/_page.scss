@@ -2,7 +2,8 @@
     position: fixed;
     width: 40px;
     height: 40px;
-    margin: 20px;
+    margin: 15px;
+    cursor: pointer;
 }
 
 .category{
@@ -70,6 +71,29 @@
         // iPhone
         @media only screen and (max-width:640px){ 
             width: 90%;
+        }
+    }
+}
+
+.project{
+    h1{
+        font-weight: bold;
+        margin: 80px 0 50px;
+    }
+
+    h4{
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        margin-top: 23px;
+    }
+
+    p{
+        font-family: 'Merriweather', serif;
+        font-size: 18px;
+
+        &.links{
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
         }
     }
 }

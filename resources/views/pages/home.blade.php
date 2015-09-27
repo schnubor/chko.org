@@ -11,7 +11,7 @@
 @section('content')
     {{-- Header --}}
     <header>
-        <div class="logo">
+        <div class="logo js-scrollToTop">
             <img class="full-width" src="/images/logo.png" alt="Chko Logo">
         </div>
         <div class="header-content text-center">

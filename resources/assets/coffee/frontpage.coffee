@@ -16,6 +16,10 @@ $('.js-arrow').click ->
         scrollTop: winHeight
     , 1500, 'easeInOutQuad'
 
+# Scroll to top
+$('.js-scrollToTop').click ->
+    $("html, body").animate({ scrollTop: "0px" }, 600, 'easeInOutQuad');
+
 # Navigation
 $(window).scroll ->
     if($(window).scrollTop() > winHeight-1)
