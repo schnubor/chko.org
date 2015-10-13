@@ -45,20 +45,37 @@
             @foreach($categories as $category)
                 <section class="category" id="{{$category->title}}">
                     <div class="container">
-                    <h3>&#8594; {{ $category->title }}</h3> 
-                        @if(!empty($category->projects()))
-                            <div class="row">
-                                @foreach($category->projects as $project)
-                                    <div class="col-md-4">
-                                        <div class="view">
-                                            <img class="full-width" src="/uploads/{{ $project->images->first()->filename }}" />
-                                            <a href="{{ route('get.project', $project->id) }}" class="mask">
-                                                <h4>{{ $project->title }}</h4>
-                                            </a>
+                    <h3>&#8594; {{ $category->title }}</h3>
+                        @if($category->title == "Motion")
+                            @if(!empty($category->projects()))
+                                <div class="row">
+                                    @foreach($category->projects as $project)
+                                        <div class="col-md-4">
+                                            <div class="view">
+                                                <img class="full-width" src="http://img.youtube.com/vi/{{ $project->videos->first()->youtube_id }}/maxresdefault.jpg" />
+                                                <a href="{{ route('get.project', $project->id) }}" class="mask">
+                                                    <h4>{{ $project->title }}</h4>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                @endforeach
-                            </div>
+                                    @endforeach
+                                </div>
+                            @endif
+                        @else
+                            @if(!empty($category->projects()))
+                                <div class="row">
+                                    @foreach($category->projects as $project)
+                                        <div class="col-md-4">
+                                            <div class="view">
+                                                <img class="full-width" src="/uploads/{{ $project->images->first()->filename }}" />
+                                                <a href="{{ route('get.project', $project->id) }}" class="mask">
+                                                    <h4>{{ $project->title }}</h4>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @endif
                         @endif
                     </div>
                 </section>
