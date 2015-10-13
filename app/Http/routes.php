@@ -17,6 +17,16 @@ Route::get('/', [
     'uses' => 'PagesController@home'
 ]);
 
+Route::get('/about', [
+    'as' => 'about',
+    'uses' => 'PagesController@about'
+]);
+
+Route::get('/imprint', [
+    'as' => 'imprint',
+    'uses' => 'PagesController@imprint'
+]);
+
 Route::get('/backend', [
     'as' => 'backend',
     'middleware' => 'auth',
@@ -120,7 +130,7 @@ delete('/project/{id}/delete', [
     'uses' => 'ProjectsController@destroy'
 ]);
 
-/* Image */
+/* Images */
 post('/image/create', [
     'as' => 'post.create.image',
     'middleware' => 'auth',
@@ -131,6 +141,19 @@ delete('/image/{id}/delete', [
     'as' => 'delete.image',
     'middleware' => 'auth',
     'uses' => 'ImagesController@destroy'
+]);
+
+/* Videos */
+post('/video/create', [
+    'as' => 'post.create.video',
+    'middleware' => 'auth',
+    'uses' => 'VideosController@store'
+]);
+
+delete('/video/{id}/delete', [
+    'as' => 'delete.video',
+    'middleware' => 'auth',
+    'uses' => 'VideosController@destroy'
 ]);
 
 /* Links */

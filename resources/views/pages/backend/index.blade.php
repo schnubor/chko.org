@@ -39,6 +39,9 @@
         {{------------------ Images ------------------}}
         @include('partials.backend.images')
 
+        {{------------------ Videos ------------------}}
+        @include('partials.backend.videos')
+
         {{------------------ Links ------------------}}
         @include('partials.backend.links')
 

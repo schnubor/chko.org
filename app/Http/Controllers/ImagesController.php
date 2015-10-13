@@ -39,9 +39,8 @@ class ImagesController extends Controller
      */
     public function store(CreateImageRequest $request)
     {
-        // uploaded vinyl cover or URL
         if($request->hasFile('imageFile')){
-              $path = public_path() . '/uploads';
+              $path = public_path() . '/uploads/images';
               $file = $request->file('imageFile');
               $fileName =  time(). '_' .$file->getClientOriginalName();
               $file->move($path,$fileName);
@@ -54,15 +53,15 @@ class ImagesController extends Controller
         if($image){
             $filename = substr($image->filename, 0, -4);
             // Resize image
-            $img640 = Resizer::make('uploads/'.$image->filename)->widen(640);
-            $img1280 = Resizer::make('uploads/'.$image->filename)->widen(1280);
-            $img1920 = Resizer::make('uploads/'.$image->filename)->widen(1920);
-            $img2560 = Resizer::make('uploads/'.$image->filename)->widen(2560);
+            $img640 = Resizer::make('uploads/images/'.$image->filename)->widen(640);
+            $img1280 = Resizer::make('uploads/images/'.$image->filename)->widen(1280);
+            $img1920 = Resizer::make('uploads/images/'.$image->filename)->widen(1920);
+            $img2560 = Resizer::make('uploads/images/'.$image->filename)->widen(2560);
             // Save images
-            $img640->save('uploads/'.$filename.'_640.png');
-            $img1280->save('uploads/'.$filename.'_1280.png');
-            $img1920->save('uploads/'.$filename.'_1920.png');
-            $img2560->save('uploads/'.$filename.'_2560.png');
+            $img640->save('uploads/images/'.$filename.'_640.png');
+            $img1280->save('uploads/images/'.$filename.'_1280.png');
+            $img1920->save('uploads/images/'.$filename.'_1920.png');
+            $img2560->save('uploads/images/'.$filename.'_2560.png');
             flash()->success('Image uploaded successfully!');
         }
         else{

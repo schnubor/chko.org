@@ -37,6 +37,14 @@ class Project extends Model
     }
 
     /**
+     * Get the images for the project.
+     */
+    public function videos()
+    {
+        return $this->hasMany('App\Video');
+    }
+
+    /**
      * Get the category for the project.
      */
     public function category()

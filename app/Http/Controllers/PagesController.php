@@ -25,6 +25,23 @@ class PagesController extends Controller
     }
 
     /**
+     * Display About page.
+     */
+    public function about()
+    {
+
+        return view('pages/about');
+    }
+
+    /**
+     * Display Imprint.
+     */
+    public function imprint()
+    {
+        return view('pages/about');
+    }
+
+    /**
      * Display Backend Area.
      */
     public function backend()
