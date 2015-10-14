@@ -20,28 +20,64 @@
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                        @foreach($project->images as $key => $image)
-                            @if($key == 0)
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            @else
-                                <li data-target="#carousel-example-generic" data-slide-to="{{ $key }}"></li>
-                            @endif
-                        @endforeach
+                        @if($project->images->count())
+                            @foreach($project->images as $key => $image)
+                                @if($key == 0)
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                @else
+                                    <li data-target="#carousel-example-generic" data-slide-to="{{ $key }}"></li>
+                                @endif
+                            @endforeach
+                        @endif
+                        @if($project->videos->count())
+                            @foreach($project->videos as $key => $video)
+                                @if($project->images->count())
+                                    <li data-target="#carousel-example-generic" data-slide-to="{{ $project->images->count() + $key }}"></li>
+                                @else
+                                    @if($key == 0)
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    @else
+                                        <li data-target="#carousel-example-generic" data-slide-to="{{ $key }}"></li>
+                                    @endif
+                                @endif
+                            @endforeach
+                        @endif
                     </ol>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                        @foreach($project->images as $key => $image)
-                            @if($key == 0)
-                                <div class="item active">
-                                    <img class="full-width" src="{{ '/uploads/'.$image->filename }}" alt="{{ $image->project->title }}">
-                                </div>
-                            @else
-                                <div class="item">
-                                    <img class="full-width" src="{{ '/uploads/'.$image->filename }}" alt="{{ $image->project->title }}">
-                                </div>
-                            @endif
-                        @endforeach
+                        @if($project->images->count())
+                            @foreach($project->images as $key => $image)
+                                @if($key == 0)
+                                    <div class="item active">
+                                        <img class="full-width" src="{{ '/uploads/images/'.$image->filename }}" alt="{{ $image->project->title }}">
+                                    </div>
+                                @else
+                                    <div class="item">
+                                        <img class="full-width" src="{{ '/uploads/images/'.$image->filename }}" alt="{{ $image->project->title }}">
+                                    </div>
+                                @endif
+                            @endforeach
+                        @endif
+                        @if($project->videos->count())
+                            @foreach($project->videos as $key => $video)
+                                @if($project->images->count())
+                                    <div class="item">
+                                        <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                @else
+                                    @if($key == 0)
+                                        <div class="item active">
+                                            <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    @else
+                                        <div class="item">
+                                            <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    @endif
+                                @endif
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>

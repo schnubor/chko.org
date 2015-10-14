@@ -1,17 +1,19 @@
 // Base
 // ------------------------
 
-@import 'base/general';
 @import 'base/variables';
+@import 'base/general';
 @import 'base/animations';
 
 // Layout
 // ------------------------
 
-@import 'layout/page';
-@import 'layout/header';
-@import 'layout/footer';
 @import 'layout/backend';
+@import 'layout/categories';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/page';
+@import 'layout/projects';
 
 // Modules
 // ------------------------
