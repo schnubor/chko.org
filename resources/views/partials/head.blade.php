@@ -6,6 +6,7 @@
 
 {{-- General stuff --}}
 <meta charset="utf-8">
+<link rel="icon" type="image/png" href="/images/favicon.png" />
 <meta name="description" content="@yield('description')">
 <meta name="viewport" content="width=device-width,user-scalable=no">
 <meta name="keywords" content="grafik, illustration, portfolio, visual communication, berlin">

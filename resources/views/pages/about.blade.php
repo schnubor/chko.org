@@ -43,10 +43,10 @@
                     <strong>Christian Korndörfer</strong><br> 
                     <a href="mailto:info@chko.org">info@chko.org</a>
                 </address> 
-                <a href="http://chko.org/CV.pdf" title="Download CV" class="btn btn-default">
+                <a href="/files/CV.pdf" title="Download CV" class="btn btn-default">
                     Download CV
                 </a><br><br> 
-                <a href="#/imprint">Imprint/legal</a> 
+                <a href="{{ route('imprint') }}">Imprint/legal</a> 
             </div>
         </div>
     </div>

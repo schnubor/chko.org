@@ -38,7 +38,7 @@ class PagesController extends Controller
      */
     public function imprint()
     {
-        return view('pages/about');
+        return view('pages/imprint');
     }
 
     /**
