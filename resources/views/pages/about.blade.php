@@ -30,7 +30,8 @@
                         <hr>
                         <p class="h3 links">Additional Links</p>
                         <ul>
-                            <li><a href="https://vimeo.com/chko" target="_blank" title="Vimeo Profile">Vimeo</a></li> 
+                            <li><a href="https://vimeo.com/chko" target="_blank" title="Vimeo Profile">Vimeo</a></li>
+                            <li><a href="https://www.youtube.com/channel/UCkkso77zR_w1Nli3lo4WKtA" target="_blank">Youtube</a></li>
                             <li><a href="https://github.com/schnubor" target="_blank" title="Github Profile">Github</a></li> 
                         </ul>
                     </div>
