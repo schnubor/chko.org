@@ -9,10 +9,10 @@
                     <div class="col-md-12">
                         @if($projects->count())
                             @foreach($projects as $project)
+                                @if($project->images->count())
                                 <div class="well">
                                     <legend>{{ $project->title }}</legend>
-                                    @if($project->images->count())
-                                        <div class="row">
+                                    <div class="row">
                                         @foreach($project->images as $image)
                                             <div class="col-md-3">
                                                 <div class="thumbnail">
@@ -32,10 +32,10 @@
                                             </div>
                                         @endforeach
                                         </div>
-                                    @else
-                                        <p class="lead">No images uploaded yet.</p>
-                                    @endif
-                                </div>
+                                    </div>
+                                @else
+                                    <p class="lead">No images uploaded yet.</p>
+                                @endif
                             @endforeach
                         @else
                             <p class="lead">You need projects to upload images.</p>
