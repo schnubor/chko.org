@@ -63,16 +63,22 @@
                             @foreach($project->videos as $key => $video)
                                 @if($project->images->count())
                                     <div class="item">
-                                        <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
+                                        </div>
                                     </div>
                                 @else
                                     @if($key == 0)
                                         <div class="item active">
-                                            <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
+                                            </div>
                                         </div>
                                     @else
                                         <div class="item">
-                                            <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
+                                            </div>
                                         </div>
                                     @endif
                                 @endif
