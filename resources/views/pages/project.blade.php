@@ -22,14 +22,10 @@
                     <ol class="carousel-indicators">
                         @if($project->videos->count())
                             @foreach($project->videos as $key => $video)
-                                @if($project->images->count())
-                                    <li data-target="#carousel-example-generic" data-slide-to="{{ $project->images->count() + $key }}"></li>
+                                @if($key == 0)
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                                 @else
-                                    @if($key == 0)
-                                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                    @else
-                                        <li data-target="#carousel-example-generic" data-slide-to="{{ $key }}"></li>
-                                    @endif
+                                    <li data-target="#carousel-example-generic" data-slide-to="{{ $key }}"></li>
                                 @endif
                             @endforeach
                         @endif
@@ -70,7 +66,7 @@
                         @if($project->images->count())
                             @foreach($project->images as $key => $image)
                                 @if($project->videos->count())
-                                    <div class="item active">
+                                    <div class="item">
                                         <img class="full-width" src="{{ '/uploads/images/'.$image->filename }}" alt="{{ $image->project->title }}">
                                     </div>
                                 @else
