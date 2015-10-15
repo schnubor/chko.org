@@ -1,4 +1,19 @@
-.project{
+.project, .about{
+    a{
+        color: $grey;
+    }
+    .btn-default{
+        background-color: transparent;
+        border-color: $red;
+        color: $red;
+        transition: .2s all;
+
+        &:hover{
+            background-color: $red;
+            color: white;
+        }
+    }
+
     h1{
         font-weight: bold;
         margin: 80px 0 50px;
@@ -32,5 +47,13 @@
 
     .carousel-indicators{
         bottom: -50px !important;
+
+        .active{
+            background-color: $grey;
+        }
+
+        li{
+            border: 1px solid $grey;
+        }
     }
 }

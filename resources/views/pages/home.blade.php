@@ -27,7 +27,7 @@
                         </span>
                     </h2>
                     <div class="buttons">
-                        <a href="#" class="btn btn-default" title="About me">About me</a>
+                        <a href="{{ route('about') }}" class="btn btn-default" title="About me">About me</a>
                         <a href="#" class="btn btn-default" title="Download CV">Download CV</a>
                     </div>
                 </div>

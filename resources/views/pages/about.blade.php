@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-sm-8"> 
                 <p>
-                    My name is Christian Korndörfer, I was born in Germany in 1987 and I'm currently working as a web developer and visual/product designer for a company called <a href="http://styla.com" target="_blank" title="styla.com">styla.com</a> in Berlin. Before styla I worked for the online music television service <a href="http://tape.tv" target="_blank" title="tape.tv">tape.tv</a></p> <p>I studied Information Technology at <a href="http://www.fh-zwickau.de" target="_blank" title="FH Zwickau">FH Zwickau</a>, Germany, graduated as a diploma engineer in 2009 and worked as a software developer/engineer afterwards. Besides motion design I was constantly looking into web related programming, UX and GUI design during that time and decided to move to Berlin in 2012 to dive deeper into this adventure.</p> <p>At the same time I started a second study in Leipzig, Germany, besides my job at the <a href="http://www.leipzigschoolofmedia.de" target="_blank" title="Leipzig School of Media">Leipzig School of Media</a> in order to improve my knowledge and get a bigger picture in general media, web technologies and economics as well as project management.</p> 
+                    Hi, I'm Christian and I'm working as a web developer and visual/product designer for <a href="http://styla.com" target="_blank" title="styla.com">styla.com</a> in Berlin. Before Styla I've worked for the online music television service <a href="http://tape.tv" target="_blank" title="tape.tv">tape.tv</a></p> <p>I studied Information Technology at <a href="http://www.fh-zwickau.de" target="_blank" title="FH Zwickau">FH Zwickau</a>, Germany, graduated as a diploma engineer in 2009 and worked as a software developer/engineer afterwards. Besides motion design I was constantly looking into web related programming, UX and GUI design during that time and decided to move to Berlin in 2012 to dive deeper into this adventure.</p> <p>At the same time I started a second study in Leipzig, Germany, besides my job at the <a href="http://www.leipzigschoolofmedia.de" target="_blank" title="Leipzig School of Media">Leipzig School of Media</a> in order to improve my knowledge and get a bigger picture in general media, web technologies and economics as well as project management.</p> 
                 <p>
                     I'm eager for learning new things, figuring out how stuff works and solving problems. I enjoy working on challenging projects with others and value good thoughts and ideas. I'm also a strong supporter of the Open Source and Open Data movements.
                 </p>
@@ -32,7 +32,7 @@
                 </ul> 
             </div>
             <div class="col-md-3 col-sm-offset-1"> 
-                <img src="images/me.c0a6fa0e.jpg" alt="Christian Korndörfer"><br><br>
+                <img src="images/about.jpg" alt="Christian Korndörfer" class="full-width"><br><br>
                 <address>
                     <strong>CHKO.org</strong><br> 
                     Friedrich-Engels-Str. 3<br> 
@@ -41,13 +41,14 @@
                 </address> 
                 <address> 
                     <strong>Christian Korndörfer</strong><br> 
-                    <a href="mailto:info@chko.org">info@chko.org</a> 
+                    <a href="mailto:info@chko.org">info@chko.org</a>
                 </address> 
-                <a href="http://chko.org/CV.pdf" title="CV">
-                    <span class="glyphicon glyphicon-save"></span><strong>Download CV.pdf</strong>
+                <a href="http://chko.org/CV.pdf" title="Download CV" class="btn btn-default">
+                    Download CV
                 </a><br><br> 
                 <a href="#/imprint">Imprint/legal</a> 
             </div>
         </div>
     </div>
+    @include('partials.footer')
 @endsection

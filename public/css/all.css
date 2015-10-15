@@ -7146,7 +7146,7 @@ xtype
         padding: 0 20px;
         font-size: 24px; } }
   .category#motion {
-    background-color: black;
+    background-color: #202020;
     color: white;
     padding-bottom: 100px; }
   .category .videoThumb {
@@ -7248,30 +7248,47 @@ header {
   margin: 15px;
   cursor: pointer; }
 
-.project h1 {
+.project a, .about a {
+  color: #777777; }
+
+.project .btn-default, .about .btn-default {
+  background-color: transparent;
+  border-color: #EA4134;
+  color: #EA4134;
+  -webkit-transition: .2s all;
+          transition: .2s all; }
+  .project .btn-default:hover, .about .btn-default:hover {
+    background-color: #EA4134;
+    color: white; }
+
+.project h1, .about h1 {
   font-weight: bold;
   margin: 80px 0 50px; }
 
-.project h4 {
+.project h4, .about h4 {
   font-family: 'Lato', sans-serif;
   font-style: normal;
   margin-top: 23px; }
 
-.project p {
+.project p, .about p {
   font-family: 'Merriweather', serif;
   font-size: 18px;
   line-height: 40px; }
-  .project p a {
+  .project p a, .about p a {
     color: #EA4134;
     font-weight: bold; }
-    .project p a:hover {
+    .project p a:hover, .about p a:hover {
       text-decoration: none; }
-  .project p.links {
+  .project p.links, .about p.links {
     font-family: 'Lato', sans-serif;
     font-weight: bold; }
 
-.project .carousel-indicators {
+.project .carousel-indicators, .about .carousel-indicators {
   bottom: -50px !important; }
+  .project .carousel-indicators .active, .about .carousel-indicators .active {
+    background-color: #777777; }
+  .project .carousel-indicators li, .about .carousel-indicators li {
+    border: 1px solid #777777; }
 
 .carousel-indicators {
   bottom: -20px; }
