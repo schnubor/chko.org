@@ -136,7 +136,7 @@ xtype
         padding: 0 20px;
         font-size: 24px; } }
   .category#motion {
-    background-color: #202020;
+    background-color: black;
     color: white;
     padding-bottom: 100px; }
   .category .videoThumb {
@@ -259,6 +259,11 @@ header {
   font-family: 'Lato', sans-serif;
   font-style: normal;
   margin-top: 23px; }
+  .project h4 a, .about h4 a {
+    color: #202020;
+    text-decoration: none; }
+    .project h4 a:hover, .about h4 a:hover {
+      text-decoration: none; }
 
 .project p, .about p {
   font-family: 'Merriweather', serif;

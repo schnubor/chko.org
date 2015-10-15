@@ -23,6 +23,15 @@
         font-family: 'Lato', sans-serif;
         font-style: normal;
         margin-top: 23px;
+
+        a{
+            color: $dark-grey;
+            text-decoration: none;
+
+            &:hover{
+                text-decoration: none;
+            }
+        }
     }
 
     p{

@@ -11,7 +11,7 @@
     <div class="container project">
         <div class="row">
             <div class="col-md-12">
-                <h4>&#8594; {{ $project->category->title }} &#8594; {{ $project->title }}</h4>
+                <h4>&#8594; <a href="/#{{ $project->category->title }}">{{ $project->category->title }}</a> &#8594; {{ $project->title }}</h4>
                 <hr>
             </div>
         </div>

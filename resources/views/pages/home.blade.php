@@ -21,9 +21,11 @@
                     <h1>Christian Korndörfer</h1>
                     <h2 class="cd-headline letters type"><span>Hi, I'm a </span>
                         <span class="cd-words-wrapper waiting">
-                            <b class="is-visible">web artisan.</b>
+                            <b class="is-visible">web developer.</b>
                             <b>motion designer.</b>
                             <b>burger lover.</b>
+                            <b>UI/UX designer.</b>
+                            <b>child of the 90s.</b>
                         </span>
                     </h2>
                     <div class="buttons">
@@ -35,54 +37,52 @@
             </div>
         </div>
         <div class="arrow js-arrow">
-            <p>stuff to look at</p>
             <span class="fa fa-chevron-down"></span>
         </div>
     </header>
-
-        {{-- Projects --}}
-        @if(!empty($categories))
-            @foreach($categories as $category)
-                <section class="category" id="{{$category->title}}">
-                    <div class="container">
-                    <h3>&#8594; {{ $category->title }}</h3>
-                        @if($category->title == "Motion")
-                            @if(!empty($category->projects()))
-                                <div class="row">
-                                    @foreach($category->projects as $project)
-                                        <div class="col-md-4">
-                                            <div class="view">
-                                                <div class="videoThumb" style="background-image: url('http://img.youtube.com/vi/{{ $project->videos->first()->youtube_id }}/maxresdefault.jpg');"></div>
-                                                <a href="{{ route('get.project', $project->id) }}" class="mask">
-                                                    <h4>{{ $project->title }}</h4>
-                                                </a>
-                                            </div>
+    
+    {{-- Projects --}}
+    @if(!empty($categories))
+        @foreach($categories as $category)
+            <section class="category" id="{{$category->title}}">
+                <div class="container">
+                <h3>&#8594; {{ $category->title }}</h3>
+                    @if($category->title == "Motion")
+                        @if(!empty($category->projects()))
+                            <div class="row">
+                                @foreach($category->projects as $project)
+                                    <div class="col-md-4">
+                                        <div class="view">
+                                            <div class="videoThumb" style="background-image: url('http://img.youtube.com/vi/{{ $project->videos->first()->youtube_id }}/maxresdefault.jpg');"></div>
+                                            <a href="{{ route('get.project', $project->id) }}" class="mask">
+                                                <h4>{{ $project->title }}</h4>
+                                            </a>
                                         </div>
-                                    @endforeach
-                                </div>
-                            @endif
-                        @else
-                            @if(!empty($category->projects()))
-                                <div class="row">
-                                    @foreach($category->projects as $project)
-                                        <div class="col-md-4">
-                                            <div class="view">
-                                                <img class="full-width" src="/uploads/{{ $project->images->first()->filename }}" />
-                                                <a href="{{ route('get.project', $project->id) }}" class="mask">
-                                                    <h4>{{ $project->title }}</h4>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    @endforeach
-                                </div>
-                            @endif
+                                    </div>
+                                @endforeach
+                            </div>
                         @endif
-                    </div>
-                </section>
-            @endforeach
-        @endif
+                    @else
+                        @if(!empty($category->projects()))
+                            <div class="row">
+                                @foreach($category->projects as $project)
+                                    <div class="col-md-4">
+                                        <div class="view">
+                                            <img class="full-width" src="/uploads/{{ $project->images->first()->filename }}" />
+                                            <a href="{{ route('get.project', $project->id) }}" class="mask">
+                                                <h4>{{ $project->title }}</h4>
+                                            </a>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        @endif
+                    @endif
+                </div>
+            </section>
+        @endforeach
+    @endif
 
-        {{-- Footer --}}
-        @include('partials/footer')
-    </div>
+    {{-- Footer --}}
+    @include('partials/footer')
 @endsection

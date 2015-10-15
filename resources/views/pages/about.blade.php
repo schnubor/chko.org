@@ -25,11 +25,16 @@
                 <p>
                     Thanks for the visit! <br> Feel free to get in touch via <a href="mailto:info@chko.org" title="Email">Email</a>, <a href="http://www.twitter.com/schnubor" target="_blank" title="twitter">Twitter</a> or <a href="https://www.linkedin.com/pub/christian-kornd%C3%B6rfer/5b/204/880" target="_blank" title="linkedin">LinkedIn</a>. 
                 </p>
-                <h4>Additional links</h4> 
-                <ul>
-                    <li><a href="https://vimeo.com/chko" target="_blank" title="Vimeo Profile">Vimeo</a></li> 
-                    <li><a href="https://github.com/schnubor" target="_blank" title="Github Profile">Github</a></li> 
-                </ul> 
+                <div class="row">
+                    <div class="col-md-3">
+                        <hr>
+                        <p class="h3 links">Additional Links</p>
+                        <ul>
+                            <li><a href="https://vimeo.com/chko" target="_blank" title="Vimeo Profile">Vimeo</a></li> 
+                            <li><a href="https://github.com/schnubor" target="_blank" title="Github Profile">Github</a></li> 
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="col-md-3 col-sm-offset-1"> 
                 <img src="images/about.jpg" alt="Christian Korndörfer" class="full-width"><br><br>
