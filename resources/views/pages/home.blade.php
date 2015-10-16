@@ -68,7 +68,7 @@
                                 @foreach($category->projects as $project)
                                     <div class="col-md-4 thumb">
                                         <div class="view">
-                                            <img class="full-width" src="/uploads/{{ $project->images->first()->filename }}" />
+                                            <img class="full-width" src="/uploads/images/{{ $project->images->first()->filename }}" />
                                             <a href="{{ route('get.project', $project->id) }}" class="mask">
                                                 <h4>{{ $project->title }}</h4>
                                             </a>
