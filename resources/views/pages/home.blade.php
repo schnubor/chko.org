@@ -51,7 +51,7 @@
                         @if(!empty($category->projects()))
                             <div class="row">
                                 @foreach($category->projects as $project)
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 thumb">
                                         <div class="view">
                                             <div class="videoThumb" style="background-image: url('http://img.youtube.com/vi/{{ $project->videos->first()->youtube_id }}/maxresdefault.jpg');"></div>
                                             <a href="{{ route('get.project', $project->id) }}" class="mask">
@@ -66,7 +66,7 @@
                         @if(!empty($category->projects()))
                             <div class="row">
                                 @foreach($category->projects as $project)
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 thumb">
                                         <div class="view">
                                             <img class="full-width" src="/uploads/images/{{ $project->images->first()->filename }}" />
                                             <a href="{{ route('get.project', $project->id) }}" class="mask">

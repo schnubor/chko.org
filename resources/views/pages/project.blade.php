@@ -20,8 +20,8 @@
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                        @if($project->images->count())
-                            @foreach($project->images as $key => $image)
+                        @if($project->videos->count())
+                            @foreach($project->videos as $key => $video)
                                 @if($key == 0)
                                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                                 @else
@@ -29,10 +29,10 @@
                                 @endif
                             @endforeach
                         @endif
-                        @if($project->videos->count())
-                            @foreach($project->videos as $key => $video)
-                                @if($project->images->count())
-                                    <li data-target="#carousel-example-generic" data-slide-to="{{ $project->images->count() + $key }}"></li>
+                        @if($project->images->count())
+                            @foreach($project->images as $key => $image)
+                                @if($project->videos->count())
+                                    <li data-target="#carousel-example-generic" data-slide-to="{{ $project->videos->count() + $key }}"></li>
                                 @else
                                     @if($key == 0)
                                         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -46,44 +46,43 @@
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                        @if($project->images->count())
-                            @foreach($project->images as $key => $image)
-                                @if($key == 0)
-                                    <div class="item active">
-                                        <img class="full-width" src="{{ '/uploads/images/'.$image->filename }}" alt="{{ $image->project->title }}">
-                                    </div>
-                                @else
-                                    <div class="item">
-                                        <img class="full-width" src="{{ '/uploads/images/'.$image->filename }}" alt="{{ $image->project->title }}">
-                                    </div>
-                                @endif
-                            @endforeach
-                        @endif
                         @if($project->videos->count())
                             @foreach($project->videos as $key => $video)
-                                @if($project->images->count())
-                                    <div class="item">
+                                @if($key == 0)
+                                    <div class="item active">
                                         <div class="embed-responsive embed-responsive-16by9">
                                             <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
                                         </div>
                                     </div>
                                 @else
+                                    <div class="item">
+                                        <div class="embed-responsive embed-responsive-16by9">
+                                            <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                @endif
+                            @endforeach
+                        @endif
+                        @if($project->images->count())
+                            @foreach($project->images as $key => $image)
+                                @if($project->videos->count())
+                                    <div class="item">
+                                        <img class="full-width" src="{{ '/uploads/images/'.$image->filename }}" alt="{{ $image->project->title }}">
+                                    </div>
+                                @else
                                     @if($key == 0)
                                         <div class="item active">
-                                            <div class="embed-responsive embed-responsive-16by9">
-                                                <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
-                                            </div>
+                                            <img class="full-width" src="{{ '/uploads/images/'.$image->filename }}" alt="{{ $image->project->title }}">
                                         </div>
                                     @else
                                         <div class="item">
-                                            <div class="embed-responsive embed-responsive-16by9">
-                                                <iframe width="100%" src="https://www.youtube.com/embed/{{ $video->youtube_id }}" frameborder="0" allowfullscreen></iframe>
-                                            </div>
+                                            <img class="full-width" src="{{ '/uploads/images/'.$image->filename }}" alt="{{ $image->project->title }}">
                                         </div>
                                     @endif
                                 @endif
                             @endforeach
                         @endif
+                        
                     </div>
                 </div>
             </div>
