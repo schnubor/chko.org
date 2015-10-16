@@ -112,7 +112,7 @@ class ImagesController extends Controller
     public function destroy($id)
     {
         $image = Image::find($id);
-        unlink(public_path().'/uploads/'.$image->filename);
+        unlink(public_path().'/uploads/images/'.$image->filename);
         $image->delete();
 
         flash()->info('Image deleted successfully.');
