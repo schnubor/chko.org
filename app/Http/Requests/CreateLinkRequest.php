@@ -26,7 +26,6 @@ class CreateLinkRequest extends Request
         return [
             'title' => 'required|max:255',
             'url' => 'required',
-            'blank' => 'required',
             'project_id' => 'required'
         ];
     }

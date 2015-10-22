@@ -198,8 +198,7 @@ header {
       background-color: transparent;
       border-color: #EA4134;
       color: #EA4134;
-      -webkit-transition: .2s all;
-              transition: .2s all; }
+      transition: .2s all; }
       header .header-content .buttons .btn-default:hover {
         background-color: #EA4134;
         color: white; }
@@ -248,8 +247,7 @@ header {
   background-color: transparent;
   border-color: #EA4134;
   color: #EA4134;
-  -webkit-transition: .2s all;
-          transition: .2s all; }
+  transition: .2s all; }
   .project .btn-default:hover, .about .btn-default:hover {
     background-color: #EA4134;
     color: white; }
@@ -313,8 +311,7 @@ header {
     .mobile-nav-toggle {
       display: block; } }
   .mobile-nav-toggle .bar {
-    -webkit-transition: .2s all;
-            transition: .2s all;
+    transition: .2s all;
     display: block;
     background-color: #777777;
     width: 100%;
@@ -376,8 +373,7 @@ nav {
       text-transform: uppercase;
       margin-right: 30px;
       letter-spacing: 1px;
-      -webkit-transition: .2s all;
-              transition: .2s all;
+      transition: .2s all;
       border-bottom: none; }
       @media only screen and (max-width: 1280px) {
         nav .menu li {
@@ -444,8 +440,7 @@ nav {
           width: 80px; } }
     .overlay .popup-content .close-icon {
       color: #CCC;
-      -webkit-transition: 0.2s all;
-              transition: 0.2s all;
+      transition: 0.2s all;
       position: absolute;
       top: 0;
       right: 30px;
@@ -487,13 +482,11 @@ nav {
     text-decoration: none;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    -webkit-transition: all 0.4s ease-in-out;
-            transition: all 0.4s ease-in-out; }
+    transition: all 0.4s ease-in-out; }
   .view img {
     display: block;
     position: relative;
-    -webkit-transition: all 0.2s linear;
-            transition: all 0.2s linear;
+    transition: all 0.2s linear;
     width: 100%; }
   .view h4 {
     text-transform: uppercase;
@@ -509,7 +502,6 @@ nav {
         -ms-transform: translateY(-100px);
             transform: translateY(-100px);
     opacity: 0;
-    -webkit-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out; }
+    transition: all 0.2s ease-in-out; }
 
 /*# sourceMappingURL=app.css.map */

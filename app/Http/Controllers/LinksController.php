@@ -39,9 +39,13 @@ class LinksController extends Controller
      */
     public function store(CreateLinkRequest $request)
     {
+        $blank = 0;
+        if($request->input('blank') === 'on'){
+            $blank = 1;
+        }
         $link = Link::create([
             'title' => $request->input('title'),
-            'blank' => $request->input('blank'),
+            'blank' => $blank,
             'url' => $request->input('url'),
             'project_id' => $request->input('project_id'),
         ]);
