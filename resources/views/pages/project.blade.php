@@ -82,8 +82,11 @@
                                 @endif
                             @endforeach
                         @endif
-                        
                     </div>
+
+                    {{-- Controls --}}
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"></a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"></a>
                 </div>
             </div>
         </div>

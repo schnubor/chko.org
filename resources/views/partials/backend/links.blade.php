@@ -54,7 +54,7 @@
                     </div>
                     <div class="form-group">
                         <label for="blank">Open in new page</label>
-                        {!! Form::checkbox('blank', Input::old('blank'), ['class' => 'form-control', 'placeholder' => 'URL', 'required' => 'required']) !!}
+                        {!! Form::checkbox('blank', Input::old('blank'), ['class' => 'form-control', 'placeholder' => 'URL']) !!}
                     </div>
                     {!! Form::button('Add Link', ['type' => 'submit', 'class' => 'btn btn-primary']) !!}
                 {!! Form::close() !!}

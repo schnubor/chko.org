@@ -51,17 +51,18 @@ class ImagesController extends Controller
             'filename' => $image
         ]);
         if($image){
-            $filename = substr($image->filename, 0, -4);
+            $filename = pathinfo($image->filename, PATHINFO_FILENAME);
+            $fileExt = pathinfo($image->filename, PATHINFO_EXTENSION);
             // Resize image
             $img640 = Resizer::make('uploads/images/'.$image->filename)->widen(640);
             $img1280 = Resizer::make('uploads/images/'.$image->filename)->widen(1280);
             $img1920 = Resizer::make('uploads/images/'.$image->filename)->widen(1920);
             $img2560 = Resizer::make('uploads/images/'.$image->filename)->widen(2560);
             // Save images
-            $img640->save('uploads/images/'.$filename.'_640.png');
-            $img1280->save('uploads/images/'.$filename.'_1280.png');
-            $img1920->save('uploads/images/'.$filename.'_1920.png');
-            $img2560->save('uploads/images/'.$filename.'_2560.png');
+            $img640->save('uploads/images/'.$filename.'_640.'.$fileExt);
+            $img1280->save('uploads/images/'.$filename.'_1280.'.$fileExt);
+            $img1920->save('uploads/images/'.$filename.'_1920.'.$fileExt);
+            $img2560->save('uploads/images/'.$filename.'_2560.'.$fileExt);
             flash()->success('Image uploaded successfully!');
         }
         else{
@@ -112,7 +113,13 @@ class ImagesController extends Controller
     public function destroy($id)
     {
         $image = Image::find($id);
-        unlink(public_path().'/uploads/'.$image->filename);
+        $filename = pathinfo($image->filename, PATHINFO_FILENAME);
+        $fileExt = pathinfo($image->filename, PATHINFO_EXTENSION);
+        unlink(public_path().'/uploads/images/'.$filename.'.'.$fileExt);
+        unlink(public_path().'/uploads/images/'.$filename.'_640.'.$fileExt);
+        unlink(public_path().'/uploads/images/'.$filename.'_1280.'.$fileExt);
+        unlink(public_path().'/uploads/images/'.$filename.'_1920.'.$fileExt);
+        unlink(public_path().'/uploads/images/'.$filename.'_2560.'.$fileExt);
         $image->delete();
 
         flash()->info('Image deleted successfully.');
