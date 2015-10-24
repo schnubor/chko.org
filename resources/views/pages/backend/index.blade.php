@@ -44,6 +44,7 @@
 
         {{------------------ Links ------------------}}
         @include('partials.backend.links')
+        @include('partials.backend.modals.link')
 
         {{------------------ Admins ------------------}}
         @include('partials.backend.admins')

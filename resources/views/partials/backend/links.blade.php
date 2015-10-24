@@ -20,7 +20,7 @@
                             <td>{{ $link->blank }}</td>
                             <td>{{ $link->project->title }}</td>
                             <td class="text-right">
-                                <button class="btn btn-sm btn-default"><i class="fa fa-fw fa-pencil"></i></button>
+                                <button class="btn btn-sm btn-default" data-toggle="modal" data-target="#editLinkModal" data-id="{{ $link->id }}"><i class="fa fa-fw fa-pencil"></i></button>
                                 {!! Form::open(['route' => ['delete.link', $link->id], 'style' => 'margin-bottom: 0; display: inline-block;', 'onsubmit'=>'return confirm("Really want to delete this link?");']) !!}
                                     <input name="_method" type="hidden" value="DELETE">
                                     {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-sm btn-danger', 'data-toggle' => 'tooltip',  'data-placement' => 'bottom', 'title' => 'Delete']) !!}
@@ -54,7 +54,7 @@
                     </div>
                     <div class="form-group">
                         <label for="blank">Open in new page</label>
-                        {!! Form::checkbox('blank', Input::old('blank'), ['class' => 'form-control', 'placeholder' => 'URL']) !!}
+                        {!! Form::checkbox('blank', Input::old('blank'), ['class' => 'form-control']) !!}
                     </div>
                     {!! Form::button('Add Link', ['type' => 'submit', 'class' => 'btn btn-primary']) !!}
                 {!! Form::close() !!}

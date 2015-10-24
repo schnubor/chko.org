@@ -25,7 +25,8 @@
                             <b>motion designer.</b>
                             <b>burger lover.</b>
                             <b>UI/UX designer.</b>
-                            <b>child of the 90s.</b>
+                            <b>kid of the 90s.</b>
+                            <b>Laravel fanboy.</b>
                         </span>
                     </h2>
                     <div class="buttons">

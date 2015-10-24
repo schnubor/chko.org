@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateLinkRequest;
+use App\Http\Requests\EditLinkRequest;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -87,9 +88,25 @@ class LinksController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update($id, EditLinkRequest $request)
     {
-        //
+        $blank = 0;
+        $link = Link::find($id);
+        if($request->input('blank') === 'on'){
+            $blank = 1;
+        }
+        $link->blank = $blank;
+        $link->title = $request->title;
+        $link->url = $request->url;
+
+        if($link->save()){
+            flash()->success('Link updated successfully!');
+        }
+        else{
+            flash()->danger('Oops! Something went wrong.');
+        }
+
+        return redirect(route('backend'));
     }
 
     /**

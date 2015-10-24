@@ -163,6 +163,12 @@ post('/link/create', [
     'uses' => 'LinksController@store'
 ]);
 
+post('link/{id}/edit', [
+    'as' => 'edit.link',
+    'middleware' => 'auth',
+    'uses' => 'LinksController@update'
+]);
+
 delete('/link/{id}/delete', [
     'as' => 'delete.link',
     'middleware' => 'auth',
@@ -175,5 +181,11 @@ get('/api/project/{id}', [
     'as' => 'api.project',
     'middleware' => 'auth',
     'uses' => 'ApiController@project'
+]);
+
+get('/api/link/{id}', [
+    'as' => 'api.link',
+    'middleware' => 'auth',
+    'uses' => 'ApiController@link'
 ]);
 
