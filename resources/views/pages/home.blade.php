@@ -3,7 +3,7 @@
 {{-- Head --}}
 @section('title') Christian Korndoerfer @endsection
 @section('description') CHKO.org is the personal online portfolio of Christian Korndoerfer who is a motion/visual designer& web developer from Berlin. Check out some of his selected works. @endsection
-@section('og_image') http://chko.org/images/fb_image.jpg @endsection
+@section('og_image') http://chko.org/images/fb.png @endsection
 @section('og_desc') CHKO.org is the personal online portfolio of Christian Korndoerfer who is a motion/visual designer& web developer from Berlin. Check out some of his selected works. @endsection
 @section('og_url') chko.org @endsection
 

@@ -4,9 +4,9 @@
 @section('description') {{ str_limit($project->description, 150) }} @endsection
 @section('og_image') 
     @if($project->images->count()) 
-{{ 'http://chko.org/uploads/images/'.$project->images->first()->filename }}
+        {{ 'http://chko.org/uploads/images/'.$project->images->first()->filename }}
     @else
-{{ 'http://img.youtube.com/vi/'.$project->videos->first()->youtube_id.'/maxresdefault.jpg' }}
+        {{ 'http://img.youtube.com/vi/'.$project->videos->first()->youtube_id.'/maxresdefault.jpg' }}
     @endif
 @endsection
 @section('og_desc') {{ str_limit($project->description, 150) }} @endsection
