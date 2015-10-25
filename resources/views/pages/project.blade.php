@@ -1,8 +1,16 @@
 @extends('app')
 
-@section('title')
-    {{ $project->title }}
+@section('title') {{ $project->title }} @endsection
+@section('description') {{ str_limit($project->description, 150) }} @endsection
+@section('og_image') 
+    @if($project->images->count()) 
+{{ 'http://chko.org/uploads/images/'.$project->images->first()->filename }}
+    @else
+{{ 'http://img.youtube.com/vi/'.$project->videos->first()->youtube_id.'/maxresdefault.jpg' }}
+    @endif
 @endsection
+@section('og_desc') {{ str_limit($project->description, 150) }} @endsection
+@section('og_url') {{ route('get.project', $project->id) }} @endsection
 
 @section('content')
     <div class="logo">
