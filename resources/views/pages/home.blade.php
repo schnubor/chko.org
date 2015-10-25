@@ -26,6 +26,7 @@
                             <b>burger lover.</b>
                             <b>UI/UX designer.</b>
                             <b>kid of the 90s.</b>
+                            <b>software engineer.</b>
                             <b>Laravel fanboy.</b>
                         </span>
                     </h2>
