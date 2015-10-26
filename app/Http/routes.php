@@ -22,7 +22,7 @@ Route::get('/about', [
     'uses' => 'PagesController@about'
 ]);
 
-Route::get('/imprint', [
+Route::get('/legal', [
     'as' => 'imprint',
     'uses' => 'PagesController@imprint'
 ]);
