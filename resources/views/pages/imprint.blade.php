@@ -13,7 +13,7 @@
     <div class="container about">
         <div class="row">
             <div class="col-md-12">
-                <h4>&#8594; Imprint / Impressum</h4>
+                <h4>&#8594; Legal notice / Impressum</h4>
                 <hr>
             </div>
         </div>
