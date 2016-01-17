@@ -12,41 +12,38 @@
     {{-- Header --}}
     <header>
         <div class="logo js-scrollToTop">
-            <img class="full-width" src="/images/logo.png" alt="Chko Logo">
+            <img class="full-width" src="/images/logo_white.png" alt="Chko Logo">
         </div>
         <div class="header-content text-center">
-            <div class="container1280">
-                <img src="/images/portrait.png" alt="Head of shoulders" class="portrait">
-                <div class="text">
-                    <h1>Christian Korndörfer</h1>
-                    <h2 class="cd-headline letters type"><span>Hi, I'm a </span>
-                        <span class="cd-words-wrapper waiting">
-                            <b class="is-visible">web developer.</b>
-                            <b>motion designer.</b>
-                            <b>burger lover.</b>
-                            <b>UI/UX designer.</b>
-                            <b>kid of the 90s.</b>
-                            <b>software engineer.</b>
-                            <b>Laravel fanboy.</b>
-                        </span>
-                    </h2>
-                    <div class="buttons">
-                        <a href="{{ route('about') }}" class="btn btn-default" title="About me">About me</a>
-                        <a href="/files/CV.pdf" class="btn btn-default" title="Download CV">Download CV</a>
-                    </div>
+            <img src="/images/portrait.png" alt="Head of shoulders" class="portrait">
+            <div class="text">
+                <h1>Christian Korndörfer</h1>
+                <h2 class="cd-headline letters type"><span>Hi, I'm a </span>
+                    <span class="cd-words-wrapper waiting">
+                        <b class="is-visible">web developer.</b>
+                        <b>motion designer.</b>
+                        <b>burger lover.</b>
+                        <b>UI/UX designer.</b>
+                        <b>kid of the 90s.</b>
+                        <b>software engineer.</b>
+                        <b>Laravel fanboy.</b>
+                    </span>
+                </h2>
+                <div class="buttons">
+                    <a href="{{ route('about') }}" class="btn btn-default" title="About me">About me</a>
+                    <a href="/files/CV.pdf" class="btn btn-default" title="Download CV">Download CV</a>
                 </div>
-                
             </div>
         </div>
         <div class="arrow js-arrow">
             <span class="fa fa-chevron-down"></span>
         </div>
     </header>
-    
+
     {{-- Projects --}}
     @if(!empty($categories))
         @foreach($categories as $category)
-            <section class="category" id="{{$category->title}}">
+            <section class="category {{$category->title}}">
                 <div class="container">
                 <h3>&#8594; {{ $category->title }}</h3>
                     @if($category->title == "Motion")
@@ -55,7 +52,7 @@
                                 @foreach($category->projects as $project)
                                     <div class="col-md-4 thumb">
                                         <div class="view">
-                                            <div class="videoThumb" style="background-image: url('http://img.youtube.com/vi/{{ $project->videos->first()->youtube_id }}/maxresdefault.jpg');"></div>
+                                            <div class="video-thumb" style="background-image: url('http://img.youtube.com/vi/{{ $project->videos->first()->youtube_id }}/maxresdefault.jpg');"></div>
                                             <a href="{{ route('get.project', $project->id) }}" class="mask">
                                                 <h4>{{ $project->title }}</h4>
                                             </a>

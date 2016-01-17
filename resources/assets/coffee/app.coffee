@@ -1,9 +1,8 @@
-console.log 'Made by Christian Korndörfer - visit chko.org'
+console.log 'Hello from chko.org'
 
 ###
     Initialize
 ###
 
 $ ->
-  $('[data-toggle="tooltip"]').tooltip()
-
+    $('[data-toggle="tooltip"]').tooltip()

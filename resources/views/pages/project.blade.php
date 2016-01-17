@@ -2,8 +2,8 @@
 
 @section('title') {{ $project->title }} @endsection
 @section('description') {{ str_limit($project->description, 150) }} @endsection
-@section('og_image') 
-    @if($project->images->count()) 
+@section('og_image')
+    @if($project->images->count())
         {{ 'http://chko.org/uploads/images/'.$project->images->first()->filename }}
     @else
         {{ 'http://img.youtube.com/vi/'.$project->videos->first()->youtube_id.'/maxresdefault.jpg' }}
@@ -14,7 +14,7 @@
 
 @section('content')
     <div class="logo">
-        <a href="/"><img class="full-width" src="/images/logo.png" alt="CHKO Logo"></a>
+        <a href="/"><img class="full-width" src="/images/logo_white.png" alt="CHKO Logo"></a>
     </div>
     <div class="container project">
         <div class="row">
@@ -114,7 +114,7 @@
                 <ul>
                     @foreach($project->links as $link)
                         <li>
-                            <a href="{{ $link->url }}" title="{{ $link->title }}" 
+                            <a href="{{ $link->url }}" title="{{ $link->title }}"
                             @if($link->blank)
                                 target="_blank"
                             @endif>{{ $link->title }}</a>

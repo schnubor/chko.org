@@ -11839,7 +11839,7 @@ jQuery(document).ready(function($){
 
 //# sourceMappingURL=backend.js.map
 (function() {
-  console.log('Made by Christian Korndörfer - visit chko.org');
+  console.log('Hello from chko.org');
 
 
   /*

@@ -18,7 +18,7 @@ $('.js-arrow').click ->
 
 # Scroll to top
 $('.js-scrollToTop').click ->
-    $("html, body").animate({ scrollTop: "0px" }, 600, 'easeInOutQuad');
+    $("html, body").animate({ scrollTop: "0px" }, 600, 'easeInOutQuad')
 
 # Navigation
 $(window).scroll ->

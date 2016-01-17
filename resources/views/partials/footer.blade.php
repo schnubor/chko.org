@@ -1,4 +1,4 @@
-<div class="container" id="footer">
+<div class="container main-footer">
     <hr>
     <a href="{{ route('about') }}">About</a>
     <a href="{{ route('imprint') }}">Legal notice</a>

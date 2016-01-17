@@ -1,96 +1,93 @@
-header{
-    width: 100%;
+header {
+    background-color: $white;
     height: 100%;
-    background-color: white;
+    width: 100%;
 
-    .header-content{
-        position: relative;
+    .header-content {
         height: 200px;
+        position: relative;
         top: calc(50% - 120px);
 
         // iPhone
-        @media only screen and (max-width:640px){ 
+        @media only screen and (max-width:640px){
             height: 330px;
             top: calc(50% - 140px);
         }
 
-        .portrait{
-            width: 200px;
+        .portrait {
             border-radius: 50%;
+            width: 200px;
 
             // iPhone
-            @media only screen and (max-width:640px){ 
+            @media only screen and (max-width:640px){
                 width: 170px;
             }
         }
-
-        .text{
-            display: inline-block;
-            text-align: left;
-            padding-left: 40px;
-            vertical-align: middle;
-
-            h1{
-                font-size: 52px;
-                margin: 0;
-
-                // iPhone
-                @media only screen and (max-width:640px){ 
-                    margin-top: 50px;
-                    font-size: 24px;
-                    padding: 0 20px;
-                }
-            }
-
-            h2{
-                color: $grey;
-                margin-top: 10px;
-                margin-bottom: 20px;
-                line-height: 40px;
-
-                span{
-                    i{
-                        font-style: normal;
-                        font-weight: 500;
-                    }
-                }
-            }
-        }
-        
-        .buttons{
-            .btn-default{
-                background-color: transparent;
-                border-color: $red;
-                color: $red;
-                transition: .2s all;
-
-                &:hover{
-                    background-color: $red;
-                    color: white;
-                }
-            }
-        }
-
     }
 
-    .arrow{
-        position: absolute;
+    .text {
+        display: inline-block;
+        padding-left: 40px;
+        text-align: left;
+        vertical-align: middle;
+
+        h1 {
+            font-size: 52px;
+            margin: 0;
+
+            // iPhone
+            @media only screen and (max-width:640px){
+                font-size: 24px;
+                margin-top: 50px;
+                padding: 0 20px;
+            }
+        }
+
+        h2 {
+            color: $grey;
+            line-height: 40px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+
+        i {
+            font-style: normal;
+            font-weight: 500;
+        }
+    }
+
+    .buttons {
+        .btn-default {
+            background-color: transparent;
+            border-color: $red;
+            color: $red;
+            transition: .2s all;
+        }
+
+        .btn-default:hover {
+            background-color: $red;
+            color: $white;
+        }
+    }
+
+    .arrow {
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: upAndDown;
         bottom: 20px;
+        cursor: pointer;
+        position: absolute;
         text-align: center;
         width: 100%;
-        animation-name: upAndDown;
-        animation-iteration-count: infinite;
-        animation-duration: 2s;
-        cursor: pointer;
 
-        p{
+        p {
             color: $grey;
         }
     }
 
     @keyframes upAndDown{
-        0%{ bottom: 20px; }
-        50%{ bottom: 10px; }
-        100%{ bottom: 20px; }
-    }  
+        0% { bottom: 20px; }
+        50% { bottom: 10px; }
+        100% { bottom: 20px; }
+    }
 }

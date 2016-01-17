@@ -8,7 +8,7 @@
 
 @section('content')
     <div class="logo">
-        <a href="/"><img class="full-width" src="/images/logo.png" alt="CHKO Logo"></a>
+        <a href="/"><img class="full-width" src="/images/logo_white.png" alt="CHKO Logo"></a>
     </div>
     <div class="container about">
         <div class="row">
@@ -18,9 +18,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12"> 
+            <div class="col-md-12">
                 <h3>Verantwortlich für die Inhalte der Website</h3>
-                
+
                 <p><br>
                     Christian Korndörfer <br>
                     Friedrich-Engels-Str. 3 <br>
