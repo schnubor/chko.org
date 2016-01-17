@@ -7368,8 +7368,8 @@ html * {
 
 .main-footer {
   color: #777;
-  margin-bottom: 20px;
-  margin-top: 50px; }
+  margin-top: 50px;
+  padding-bottom: 20px; }
   .main-footer a {
     color: #777;
     padding-right: 15px; }
@@ -7469,7 +7469,8 @@ header {
     .logo {
       left: 50%;
       margin-left: -20px;
-      margin-top: 30px; } }
+      margin-top: 30px;
+      position: absolute; } }
 
 @media only screen and (max-width: 640px) {
   .project,
