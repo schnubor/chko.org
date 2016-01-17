@@ -12,7 +12,7 @@
     {{-- Header --}}
     <header>
         <div class="logo js-scrollToTop">
-            <img class="full-width" src="/images/logo_white.png" alt="Chko Logo">
+            <img class="full-width" src="/images/logo_red.png" alt="Chko Logo">
         </div>
         <div class="header-content text-center">
             <img src="/images/portrait.png" alt="Head of shoulders" class="portrait">
