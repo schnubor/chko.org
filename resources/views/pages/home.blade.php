@@ -43,7 +43,7 @@
     {{-- Projects --}}
     @if(!empty($categories))
         @foreach($categories as $category)
-            <section class="category {{$category->title}}">
+            <section class="category {{$category->title}}" id="{{$category->title}}">
                 <div class="container">
                 <h3>&#8594; {{ $category->title }}</h3>
                     @if($category->title == "Motion")
