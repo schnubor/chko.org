@@ -27,6 +27,7 @@
                         <b>kid of the 90s.</b>
                         <b>software engineer.</b>
                         <b>Laravel fanboy.</b>
+                        <b>video games addict.</b>
                     </span>
                 </h2>
                 <div class="buttons">
