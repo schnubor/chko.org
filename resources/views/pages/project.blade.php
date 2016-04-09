@@ -13,7 +13,9 @@
 @section('og_url') {{ route('get.project', $project->id) }} @endsection
 
 @section('content')
-    @include('partials.logo')
+    <div class="logo smallMargin">
+        <a href="/"><img class="full-width" src="/images/logo_red.png" alt="CHKO Logo"></a>
+    </div>
     <div class="container project">
         <div class="row">
             <div class="col-md-12">
